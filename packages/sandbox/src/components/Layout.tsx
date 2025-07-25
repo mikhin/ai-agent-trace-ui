@@ -15,7 +15,6 @@ export function Layout({ children }: LayoutProps) {
     setSidebarOpen(false);
   };
 
-  // Handle escape key to close sidebar
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === "Escape" && sidebarOpen) {
