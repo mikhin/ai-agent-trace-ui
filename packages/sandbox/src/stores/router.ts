@@ -2,6 +2,7 @@ import { createRouter } from "@nanostores/router";
 
 import { BadgePage } from "../pages/BadgePage";
 import { HomePage } from "../pages/HomePage";
+import { OpenTelemetryAdaptersPage } from "../pages/OpenTelemetryAdaptersPage";
 import { SpanCardPage } from "../pages/SpanCardPage";
 import { SpanCardsListPage } from "../pages/SpanCardsListPage";
 import { TreeViewPage } from "../pages/TreeViewPage";
@@ -33,6 +34,11 @@ export const ROUTES = {
     path: "/tree-view",
     component: TreeViewPage,
     label: "Tree View",
+  },
+  data: {
+    path: "/open-telemetry-adapters-page",
+    component: OpenTelemetryAdaptersPage,
+    label: "OpenTelemetry Adapters",
   },
 } as const;
 

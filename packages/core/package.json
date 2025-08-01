@@ -15,9 +15,13 @@
     "src"
   ],
   "scripts": {
-    "tsc": "tsc -p tsconfig.app.json --noEmit --skipLibCheck"
+    "tsc": "tsc -p tsconfig.app.json --noEmit --skipLibCheck",
+    "test": "vitest"
   },
   "dependencies": {
+    "@opentelemetry/api": "^1.9.0",
+    "@opentelemetry/sdk-trace-base": "^2.0.1",
+    "@opentelemetry/otlp-transformer": "^0.203.0",
     "@radix-ui/react-collapsible": "^1.1.11",
     "autoprefixer": "^10.4.21",
     "lucide-react": "^0.534.0",
@@ -37,6 +41,7 @@
     "globals": "^16.3.0",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.35.1",
-    "vite": "^7.0.4"
+    "vite": "^7.0.4",
+    "vitest": "^3.2.4"
   }
 }

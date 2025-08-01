@@ -38,11 +38,11 @@ export const SpanCardPage = (): ReactElement => {
         description="Different levels and spans displayed with SpanCard component"
       >
         <SandboxItem title="Root Span (Level 0)" pattern="grid">
-          <SpanCard data={rootSpan} level={0} />
+          <SpanCard expandButton="inside" data={rootSpan} level={0} />
         </SandboxItem>
 
         <SandboxItem title="Child Span (Level 1)">
-          <SpanCard data={childSpan} level={1} />
+          <SpanCard expandButton="outside" data={childSpan} level={1} />
         </SandboxItem>
       </SandboxSection>
 
@@ -55,6 +55,7 @@ export const SpanCardPage = (): ReactElement => {
           pattern="grid"
         >
           <SpanCard
+            expandButton="inside"
             data={rootSpan}
             level={0}
             selectedCardId={selectedCardId}
@@ -62,6 +63,7 @@ export const SpanCardPage = (): ReactElement => {
           />
 
           <SpanCard
+            expandButton="inside"
             data={childSpan}
             level={0}
             selectedCardId={selectedCardId}
@@ -70,7 +72,12 @@ export const SpanCardPage = (): ReactElement => {
         </SandboxItem>
 
         <SandboxItem title="Pre-selected Card">
-          <SpanCard data={childSpan} level={1} selectedCardId={childSpan.id} />
+          <SpanCard
+            expandButton="inside"
+            data={childSpan}
+            level={1}
+            selectedCardId={childSpan.id}
+          />
         </SandboxItem>
       </SandboxSection>
 
@@ -80,6 +87,7 @@ export const SpanCardPage = (): ReactElement => {
       >
         <SandboxItem title="Span With No Children" pattern="dots">
           <SpanCard
+            expandButton="inside"
             data={noChildrenSpan}
             level={0}
             selectedCardId={selectedCardId}

@@ -19,6 +19,7 @@ export const SpanCardsListPage = (): ReactElement => {
         <SpanCardsList>
           {sampleTreeViewData.map((span) => (
             <SpanCard
+              expandButton="inside"
               key={span.id}
               data={span}
               level={0}
