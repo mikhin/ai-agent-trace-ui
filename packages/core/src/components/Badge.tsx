@@ -1,28 +1,10 @@
-import type { PropsWithChildren, ReactElement, ReactNode } from "react";
+import type { ReactElement, ReactNode } from "react";
 
-import { badgeThemeClasses } from "../constants";
+import type { ColorVariant } from "../types/ui.ts";
 
-export type BadgeTheme =
-  | "purple"
-  | "indigo"
-  | "orange"
-  | "teal"
-  | "cyan"
-  | "sky"
-  | "yellow"
-  | "emerald"
-  | "red"
-  | "gray";
+import { colorThemeClasses } from "../constants/ui.ts";
 
-interface BadgeProps extends PropsWithChildren {
-  theme?: BadgeTheme;
-  size?: "sm" | "md" | "xs";
-  iconStart?: ReactNode;
-  iconEnd?: ReactNode;
-  className?: string;
-}
-
-const sizes = {
+const sizeClasses = {
   xs: "px-1.5 py-1 h-3.5",
   sm: "px-2 py-0.5",
   md: "px-2.5 py-1",
@@ -34,6 +16,41 @@ const textSizes = {
   md: "text-sm font-medium",
 };
 
+export type BadgeProps = {
+  /**
+   * The content of the badge
+   */
+  children: ReactNode;
+
+  /**
+   * The color theme of the badge
+   * Uses the unified color theme system
+   * @default "gray"
+   */
+  theme: ColorVariant;
+
+  /**
+   * The size of the badge
+   * @default "md"
+   */
+  size?: "sm" | "md" | "xs";
+
+  /**
+   * Optional icon to display at the start of the badge
+   */
+  iconStart?: ReactElement;
+
+  /**
+   * Optional icon to display at the end of the badge
+   */
+  iconEnd?: ReactElement;
+
+  /**
+   * Optional className for additional styling
+   */
+  className?: string;
+};
+
 export const Badge = ({
   children,
   theme = "gray",
@@ -42,17 +59,21 @@ export const Badge = ({
   iconEnd,
   className = "",
 }: BadgeProps): ReactElement => {
+  const { bg, darkBg, text, darkText } = colorThemeClasses[theme];
+
   return (
     <span
-      className={`inline-flex min-w-fit items-center overflow-hidden text-ellipsis whitespace-nowrap rounded font-medium ${badgeThemeClasses[theme]} ${sizes[size]} ${className}`}
+      className={`inline-flex min-w-fit items-center overflow-hidden text-ellipsis whitespace-nowrap rounded font-medium ${bg} ${text} ${darkBg} ${darkText} ${sizeClasses[size]} ${className}`}
     >
-      {iconStart && <span className="mr-0.5 flex-shrink-0">{iconStart}</span>}
+      {iconStart && <span className="mr-1 flex-shrink-0">{iconStart}</span>}
+
       <span
         className={`${textSizes[size]} min-w-0 flex-shrink-0 tracking-normal`}
       >
         {children}
       </span>
-      {iconEnd && <span className="ml-0.5 flex-shrink-0">{iconEnd}</span>}
+
+      {iconEnd && <span className="ml-1 flex-shrink-0">{iconEnd}</span>}
     </span>
   );
 };

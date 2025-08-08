@@ -340,7 +340,7 @@ export const OpenTelemetryAdaptersPage = (): ReactElement => {
           pattern="grid"
         >
           <TreeView
-            expandButton="outside"
+            expandButton="inside"
             spans={multiAgentSpans}
             initialSelectedId="agent-security"
             onSelectionChange={handleSelectionChange}
@@ -362,7 +362,7 @@ export const OpenTelemetryAdaptersPage = (): ReactElement => {
       >
         <SandboxItem title="All Traces Combined View" pattern="grid">
           <TreeView
-            expandButton="outside"
+            expandButton="inside"
             spans={allTraces}
             onSelectionChange={handleSelectionChange}
           />

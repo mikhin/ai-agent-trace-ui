@@ -22,7 +22,7 @@ export const TreeViewPage = (): ReactElement => {
 
         <SandboxItem title="Tree View with Initial Selection" pattern="grid">
           <TreeView
-            expandButton="outside"
+            expandButton="inside"
             spans={sampleTreeViewData}
             initialSelectedId="2"
             onSelectionChange={(id) =>

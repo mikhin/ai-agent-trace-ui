@@ -1,12 +1,12 @@
-import { type ReactElement, useState } from "react";
 import {
   convertOTelDocumentToSpanCards,
   TreeView,
   type OpenTelemetryDocument,
 } from "ai-agent-trace-ui-core";
-import { SandboxSection } from "../components/SandboxSection";
-import { SandboxItem } from "../components/SandboxItem";
+import { type ReactElement, useState } from "react";
 
+import { SandboxItem } from "../components/SandboxItem";
+import { SandboxSection } from "../components/SandboxSection";
 import quoTavAgentDataRaw from "../data/quo_tav_agent.json";
 import ragEarningsAgentDataRaw from "../data/rag_earnings_agent.json";
 import smolDeepResearchAgentDataRaw from "../data/smol_deep_research_agent.json";

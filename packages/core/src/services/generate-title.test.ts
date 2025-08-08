@@ -1,6 +1,9 @@
 import { describe, it, expect } from "vitest";
 
-import { LLM_ATTRIBUTES, VECTOR_DB_ATTRIBUTES } from "../constants";
+import {
+  OPENTELEMETRY_GENAI_ATTRIBUTES,
+  STANDARD_OPENTELEMETRY_ATTRIBUTES,
+} from "../constants/span-mappings.ts";
 import { createMockSpan } from "../utils/tests/create-mock-span";
 import { generateTitle } from "./generate-title";
 
@@ -10,8 +13,8 @@ describe("generateTitle", () => {
       const span = createMockSpan({
         name: "chat.completions.create",
         attributes: {
-          [LLM_ATTRIBUTES.MODEL]: "gpt-4",
-          [LLM_ATTRIBUTES.TOKENS_TOTAL]: 150,
+          [OPENTELEMETRY_GENAI_ATTRIBUTES.MODEL]: "gpt-4",
+          [OPENTELEMETRY_GENAI_ATTRIBUTES.USAGE_TOTAL_TOKENS]: 150,
         },
       });
 
@@ -24,8 +27,8 @@ describe("generateTitle", () => {
       const span = createMockSpan({
         name: "messages.create",
         attributes: {
-          [LLM_ATTRIBUTES.MODEL]: "claude-3-sonnet",
-          [LLM_ATTRIBUTES.COST]: 0.0245,
+          [OPENTELEMETRY_GENAI_ATTRIBUTES.MODEL]: "claude-3-sonnet",
+          [OPENTELEMETRY_GENAI_ATTRIBUTES.USAGE_TOTAL_TOKENS]: 0.0245,
         },
       });
 
@@ -38,14 +41,14 @@ describe("generateTitle", () => {
       const spanWithStringModel = createMockSpan({
         name: "completion",
         attributes: {
-          [LLM_ATTRIBUTES.MODEL]: "gpt-3.5-turbo",
+          [OPENTELEMETRY_GENAI_ATTRIBUTES.MODEL]: "gpt-3.5-turbo",
         },
       });
 
       const spanWithNumberModel = createMockSpan({
         name: "completion",
         attributes: {
-          [LLM_ATTRIBUTES.MODEL]: 123, // Invalid but should still work
+          [OPENTELEMETRY_GENAI_ATTRIBUTES.MODEL]: 123, // Invalid but should still work
         },
       });
 
@@ -61,8 +64,8 @@ describe("generateTitle", () => {
       const span = createMockSpan({
         name: "vector_search",
         attributes: {
-          [VECTOR_DB_ATTRIBUTES.COLLECTION]: "embeddings",
-          [VECTOR_DB_ATTRIBUTES.OPERATION]: "query",
+          [STANDARD_OPENTELEMETRY_ATTRIBUTES.DB_COLLECTION]: "embeddings",
+          [STANDARD_OPENTELEMETRY_ATTRIBUTES.DB_OPERATION]: "query",
         },
       });
 
@@ -75,8 +78,8 @@ describe("generateTitle", () => {
       const span = createMockSpan({
         name: "pinecone_upsert",
         attributes: {
-          [VECTOR_DB_ATTRIBUTES.COLLECTION]: "documents",
-          [VECTOR_DB_ATTRIBUTES.OPERATION]: "upsert",
+          [STANDARD_OPENTELEMETRY_ATTRIBUTES.DB_COLLECTION]: "documents",
+          [STANDARD_OPENTELEMETRY_ATTRIBUTES.DB_OPERATION]: "upsert",
         },
       });
 
@@ -89,7 +92,7 @@ describe("generateTitle", () => {
       const span = createMockSpan({
         name: "vector_search",
         attributes: {
-          [VECTOR_DB_ATTRIBUTES.OPERATION]: "query",
+          [STANDARD_OPENTELEMETRY_ATTRIBUTES.DB_OPERATION]: "query",
           // Missing collection
         },
       });
@@ -103,7 +106,7 @@ describe("generateTitle", () => {
       const span = createMockSpan({
         name: "vector_search",
         attributes: {
-          [VECTOR_DB_ATTRIBUTES.COLLECTION]: "embeddings",
+          [STANDARD_OPENTELEMETRY_ATTRIBUTES.DB_COLLECTION]: "embeddings",
           // Missing operation
         },
       });
@@ -199,9 +202,9 @@ describe("generateTitle", () => {
       const span = createMockSpan({
         name: "mixed_operation",
         attributes: {
-          [LLM_ATTRIBUTES.MODEL]: "gpt-4",
-          [VECTOR_DB_ATTRIBUTES.COLLECTION]: "embeddings",
-          [VECTOR_DB_ATTRIBUTES.OPERATION]: "query",
+          [OPENTELEMETRY_GENAI_ATTRIBUTES.MODEL]: "gpt-4",
+          [STANDARD_OPENTELEMETRY_ATTRIBUTES.DB_COLLECTION]: "embeddings",
+          [STANDARD_OPENTELEMETRY_ATTRIBUTES.DB_OPERATION]: "query",
         },
       });
 
@@ -214,7 +217,7 @@ describe("generateTitle", () => {
       const span = createMockSpan({
         name: "mixed_operation",
         attributes: {
-          [LLM_ATTRIBUTES.MODEL]: "claude-3-sonnet",
+          [OPENTELEMETRY_GENAI_ATTRIBUTES.MODEL]: "claude-3-sonnet",
           "http.method": "POST",
           "http.url": "https://api.anthropic.com/v1/messages",
         },
@@ -229,8 +232,8 @@ describe("generateTitle", () => {
       const span = createMockSpan({
         name: "mixed_operation",
         attributes: {
-          [VECTOR_DB_ATTRIBUTES.COLLECTION]: "documents",
-          [VECTOR_DB_ATTRIBUTES.OPERATION]: "search",
+          [STANDARD_OPENTELEMETRY_ATTRIBUTES.DB_COLLECTION]: "documents",
+          [STANDARD_OPENTELEMETRY_ATTRIBUTES.DB_OPERATION]: "search",
           "http.method": "POST",
           "http.url": "https://api.pinecone.io/vectors/query",
         },
@@ -382,7 +385,7 @@ describe("generateTitle", () => {
       const span = createMockSpan({
         name: "test",
         attributes: {
-          [LLM_ATTRIBUTES.MODEL]: true, // boolean
+          [OPENTELEMETRY_GENAI_ATTRIBUTES.MODEL]: true, // boolean
         },
       });
 

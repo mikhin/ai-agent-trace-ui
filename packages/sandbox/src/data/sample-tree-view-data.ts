@@ -8,7 +8,7 @@ export const sampleTreeViewData: SpanCardType[] = [
     endTime: new Date("2023-01-01T00:06:12Z"),
     duration: 37220,
     cost: 1234,
-    type: "CHAIN",
+    type: "chain_operation",
     tokensCount: 1000,
     status: "success",
     children: [
@@ -20,7 +20,7 @@ export const sampleTreeViewData: SpanCardType[] = [
         duration: 4910,
         tokensCount: 500,
         cost: 150,
-        type: "LLM",
+        type: "llm_call",
         status: "success",
         children: [
           {
@@ -32,7 +32,7 @@ export const sampleTreeViewData: SpanCardType[] = [
             tokensCount: 250,
             cost: 75,
             status: "running",
-            type: "LLM",
+            type: "llm_call",
           },
           {
             id: "1-1-2",
@@ -43,7 +43,7 @@ export const sampleTreeViewData: SpanCardType[] = [
             cost: 75,
             tokensCount: 250,
             status: "error",
-            type: "LLM",
+            type: "llm_call",
           },
         ],
       },
@@ -56,7 +56,7 @@ export const sampleTreeViewData: SpanCardType[] = [
         cost: 80,
         tokensCount: 200,
         status: "success",
-        type: "CHAIN",
+        type: "chain_operation",
       },
       {
         id: "1-3",
@@ -67,7 +67,7 @@ export const sampleTreeViewData: SpanCardType[] = [
         cost: 25,
         status: "success",
         tokensCount: 100,
-        type: "TOOL",
+        type: "tool_execution",
       },
       {
         id: "1-4",
@@ -78,7 +78,7 @@ export const sampleTreeViewData: SpanCardType[] = [
         status: "running",
         cost: 90,
         tokensCount: 300,
-        type: "CHAIN",
+        type: "chain_operation",
         children: [
           {
             id: "1-4-1",
@@ -89,7 +89,7 @@ export const sampleTreeViewData: SpanCardType[] = [
             cost: 15,
             tokensCount: 50,
             status: "error",
-            type: "CHAIN",
+            type: "chain_operation",
           },
           {
             id: "1-4-2",
@@ -100,7 +100,7 @@ export const sampleTreeViewData: SpanCardType[] = [
             tokensCount: 100,
             status: "error",
             cost: 5,
-            type: "LLM",
+            type: "llm_call",
           },
         ],
       },
@@ -113,7 +113,7 @@ export const sampleTreeViewData: SpanCardType[] = [
         status: "running",
         tokensCount: 150,
         cost: 20,
-        type: "TOOL",
+        type: "tool_execution",
       },
       {
         id: "1-6",
@@ -124,7 +124,7 @@ export const sampleTreeViewData: SpanCardType[] = [
         status: "success",
         duration: 7840,
         cost: 15,
-        type: "CHAIN",
+        type: "chain_operation",
       },
       {
         id: "1-7",
@@ -135,7 +135,7 @@ export const sampleTreeViewData: SpanCardType[] = [
         tokensCount: 100,
         status: "success",
         cost: 5,
-        type: "LLM",
+        type: "llm_call",
       },
     ],
   },

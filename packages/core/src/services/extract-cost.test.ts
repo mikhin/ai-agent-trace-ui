@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 
-import { LLM_ATTRIBUTES } from "../constants";
+import { OPENTELEMETRY_GENAI_ATTRIBUTES } from "../constants/span-mappings.ts";
 import { createMockSpan } from "../utils/tests/create-mock-span";
 import { extractCost } from "./extract-cost";
 
@@ -8,7 +8,7 @@ describe("extractCost", () => {
   describe("valid number costs", () => {
     it("should return cost when available as positive number", () => {
       const span = createMockSpan({
-        attributes: { [LLM_ATTRIBUTES.COST]: 0.0045 },
+        attributes: { [OPENTELEMETRY_GENAI_ATTRIBUTES.USAGE_COST]: 0.0045 },
       });
 
       const result = extractCost(span);
@@ -18,7 +18,7 @@ describe("extractCost", () => {
 
     it("should return zero cost when cost is 0", () => {
       const span = createMockSpan({
-        attributes: { [LLM_ATTRIBUTES.COST]: 0 },
+        attributes: { [OPENTELEMETRY_GENAI_ATTRIBUTES.USAGE_COST]: 0 },
       });
 
       const result = extractCost(span);
@@ -28,7 +28,7 @@ describe("extractCost", () => {
 
     it("should handle small decimal costs", () => {
       const span = createMockSpan({
-        attributes: { [LLM_ATTRIBUTES.COST]: 0.000123 },
+        attributes: { [OPENTELEMETRY_GENAI_ATTRIBUTES.USAGE_COST]: 0.000123 },
       });
 
       const result = extractCost(span);
@@ -38,7 +38,7 @@ describe("extractCost", () => {
 
     it("should handle large costs", () => {
       const span = createMockSpan({
-        attributes: { [LLM_ATTRIBUTES.COST]: 15.75 },
+        attributes: { [OPENTELEMETRY_GENAI_ATTRIBUTES.USAGE_COST]: 15.75 },
       });
 
       const result = extractCost(span);
@@ -48,7 +48,7 @@ describe("extractCost", () => {
 
     it("should handle negative costs", () => {
       const span = createMockSpan({
-        attributes: { [LLM_ATTRIBUTES.COST]: -5.0 }, // Credits or refunds?
+        attributes: { [OPENTELEMETRY_GENAI_ATTRIBUTES.USAGE_COST]: -5.0 }, // Credits or refunds?
       });
 
       const result = extractCost(span);
@@ -70,7 +70,7 @@ describe("extractCost", () => {
 
     it("should return 0 when cost is null", () => {
       const span = createMockSpan({
-        attributes: { [LLM_ATTRIBUTES.COST]: null },
+        attributes: { [OPENTELEMETRY_GENAI_ATTRIBUTES.USAGE_COST]: null },
       });
 
       const result = extractCost(span);
@@ -80,7 +80,7 @@ describe("extractCost", () => {
 
     it("should return 0 when cost is a string", () => {
       const span = createMockSpan({
-        attributes: { [LLM_ATTRIBUTES.COST]: "0.0045" },
+        attributes: { [OPENTELEMETRY_GENAI_ATTRIBUTES.USAGE_COST]: "0.0045" },
       });
 
       const result = extractCost(span);
@@ -90,7 +90,7 @@ describe("extractCost", () => {
 
     it("should return 0 when cost is a boolean", () => {
       const span = createMockSpan({
-        attributes: { [LLM_ATTRIBUTES.COST]: true },
+        attributes: { [OPENTELEMETRY_GENAI_ATTRIBUTES.USAGE_COST]: true },
       });
 
       const result = extractCost(span);
@@ -100,7 +100,9 @@ describe("extractCost", () => {
 
     it("should return 0 when cost is an array", () => {
       const span = createMockSpan({
-        attributes: { [LLM_ATTRIBUTES.COST]: [0.0045, 0.0023] },
+        attributes: {
+          [OPENTELEMETRY_GENAI_ATTRIBUTES.USAGE_COST]: [0.0045, 0.0023],
+        },
       });
 
       const result = extractCost(span);
@@ -111,7 +113,10 @@ describe("extractCost", () => {
     it("should return 0 when cost is an object", () => {
       const span = createMockSpan({
         attributes: {
-          [LLM_ATTRIBUTES.COST]: { amount: 0.0045, currency: "USD" },
+          [OPENTELEMETRY_GENAI_ATTRIBUTES.USAGE_COST]: {
+            amount: 0.0045,
+            currency: "USD",
+          },
         },
       });
 
@@ -124,7 +129,7 @@ describe("extractCost", () => {
   describe("edge cases with numbers", () => {
     it("should handle NaN", () => {
       const span = createMockSpan({
-        attributes: { [LLM_ATTRIBUTES.COST]: NaN },
+        attributes: { [OPENTELEMETRY_GENAI_ATTRIBUTES.USAGE_COST]: NaN },
       });
 
       const result = extractCost(span);
@@ -134,7 +139,7 @@ describe("extractCost", () => {
 
     it("should handle Infinity", () => {
       const span = createMockSpan({
-        attributes: { [LLM_ATTRIBUTES.COST]: Infinity },
+        attributes: { [OPENTELEMETRY_GENAI_ATTRIBUTES.USAGE_COST]: Infinity },
       });
 
       const result = extractCost(span);
@@ -144,7 +149,7 @@ describe("extractCost", () => {
 
     it("should handle -Infinity", () => {
       const span = createMockSpan({
-        attributes: { [LLM_ATTRIBUTES.COST]: -Infinity },
+        attributes: { [OPENTELEMETRY_GENAI_ATTRIBUTES.USAGE_COST]: -Infinity },
       });
 
       const result = extractCost(span);
@@ -154,7 +159,9 @@ describe("extractCost", () => {
 
     it("should handle very small numbers", () => {
       const span = createMockSpan({
-        attributes: { [LLM_ATTRIBUTES.COST]: Number.MIN_VALUE },
+        attributes: {
+          [OPENTELEMETRY_GENAI_ATTRIBUTES.USAGE_COST]: Number.MIN_VALUE,
+        },
       });
 
       const result = extractCost(span);
@@ -164,7 +171,9 @@ describe("extractCost", () => {
 
     it("should handle very large numbers", () => {
       const span = createMockSpan({
-        attributes: { [LLM_ATTRIBUTES.COST]: Number.MAX_VALUE },
+        attributes: {
+          [OPENTELEMETRY_GENAI_ATTRIBUTES.USAGE_COST]: Number.MAX_VALUE,
+        },
       });
 
       const result = extractCost(span);

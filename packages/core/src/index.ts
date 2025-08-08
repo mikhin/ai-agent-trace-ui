@@ -1,6 +1,5 @@
 export { Badge } from "./components/Badge";
 export { SpanCard } from "./components/SpanCard";
-export { SpanCardsList } from "./components/SpanCardsList";
 export { TreeView } from "./components/TreeView";
 export { type SpanCardType } from "./types/span";
 export { convertOTelTraceToSpanTree } from "./services/convert-o-tel-trace-to-span-tree.ts";

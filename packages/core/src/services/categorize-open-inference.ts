@@ -1,0 +1,23 @@
+import type { Span } from "../types/open-telemetry.ts";
+import type { SpanCategory } from "../types/span.ts";
+
+import {
+  OPENINFERENCE_ATTRIBUTES,
+  OPENINFERENCE_MAPPINGS,
+} from "../constants/span-mappings.ts";
+import { getAttributeValue } from "./get-attribute-value.ts";
+
+/**
+ * Categorize span using OpenInference semantic conventions
+ */
+export function categorizeOpenInference(span: Span): SpanCategory {
+  const spanKind = getAttributeValue(span, OPENINFERENCE_ATTRIBUTES.SPAN_KIND);
+
+  if (typeof spanKind === "string") {
+    const category = OPENINFERENCE_MAPPINGS[spanKind];
+
+    if (category) return category;
+  }
+
+  return "unknown";
+}

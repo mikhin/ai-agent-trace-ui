@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 
-import { LLM_ATTRIBUTES } from "../constants";
+import { OPENTELEMETRY_GENAI_ATTRIBUTES } from "../constants/span-mappings.ts";
 import { createMockSpan } from "../utils/tests/create-mock-span";
 import { extractTokenCount } from "./extract-token-count";
 
@@ -8,9 +8,9 @@ describe("extractTokenCount", () => {
   it("should return total tokens when available as number", () => {
     const span = createMockSpan({
       attributes: {
-        [LLM_ATTRIBUTES.TOKENS_TOTAL]: 150,
-        [LLM_ATTRIBUTES.TOKENS_INPUT]: 100,
-        [LLM_ATTRIBUTES.TOKENS_OUTPUT]: 50,
+        [OPENTELEMETRY_GENAI_ATTRIBUTES.USAGE_TOTAL_TOKENS]: 150,
+        [OPENTELEMETRY_GENAI_ATTRIBUTES.USAGE_INPUT_TOKENS]: 100,
+        [OPENTELEMETRY_GENAI_ATTRIBUTES.USAGE_OUTPUT_TOKENS]: 50,
       },
     });
 
@@ -22,8 +22,8 @@ describe("extractTokenCount", () => {
   it("should sum input and output tokens when total is not available", () => {
     const span = createMockSpan({
       attributes: {
-        [LLM_ATTRIBUTES.TOKENS_INPUT]: 80,
-        [LLM_ATTRIBUTES.TOKENS_OUTPUT]: 40,
+        [OPENTELEMETRY_GENAI_ATTRIBUTES.USAGE_INPUT_TOKENS]: 80,
+        [OPENTELEMETRY_GENAI_ATTRIBUTES.USAGE_OUTPUT_TOKENS]: 40,
       },
     });
 
@@ -43,8 +43,8 @@ describe("extractTokenCount", () => {
   it("should handle mixed token types correctly", () => {
     const span = createMockSpan({
       attributes: {
-        [LLM_ATTRIBUTES.TOKENS_TOTAL]: "not-a-number", // string value
-        [LLM_ATTRIBUTES.TOKENS_INPUT]: 60,
+        [OPENTELEMETRY_GENAI_ATTRIBUTES.USAGE_TOTAL_TOKENS]: "not-a-number", // string value
+        [OPENTELEMETRY_GENAI_ATTRIBUTES.USAGE_INPUT_TOKENS]: 60,
         // TOKENS_OUTPUT is missing (undefined)
       },
     });
@@ -57,8 +57,8 @@ describe("extractTokenCount", () => {
   it("should handle partial token information", () => {
     const span = createMockSpan({
       attributes: {
-        [LLM_ATTRIBUTES.TOKENS_TOTAL]: null,
-        [LLM_ATTRIBUTES.TOKENS_INPUT]: 90,
+        [OPENTELEMETRY_GENAI_ATTRIBUTES.USAGE_TOTAL_TOKENS]: null,
+        [OPENTELEMETRY_GENAI_ATTRIBUTES.USAGE_INPUT_TOKENS]: 90,
         // TOKENS_OUTPUT is missing
       },
     });
@@ -71,8 +71,8 @@ describe("extractTokenCount", () => {
   it("should handle zero token values correctly", () => {
     const span = createMockSpan({
       attributes: {
-        [LLM_ATTRIBUTES.TOKENS_INPUT]: 0,
-        [LLM_ATTRIBUTES.TOKENS_OUTPUT]: 0,
+        [OPENTELEMETRY_GENAI_ATTRIBUTES.USAGE_INPUT_TOKENS]: 0,
+        [OPENTELEMETRY_GENAI_ATTRIBUTES.USAGE_OUTPUT_TOKENS]: 0,
       },
     });
 
@@ -84,9 +84,9 @@ describe("extractTokenCount", () => {
   it("should prioritize total tokens over individual counts", () => {
     const span = createMockSpan({
       attributes: {
-        [LLM_ATTRIBUTES.TOKENS_TOTAL]: 200,
-        [LLM_ATTRIBUTES.TOKENS_INPUT]: 999, // Should be ignored
-        [LLM_ATTRIBUTES.TOKENS_OUTPUT]: 999, // Should be ignored
+        [OPENTELEMETRY_GENAI_ATTRIBUTES.USAGE_TOTAL_TOKENS]: 200,
+        [OPENTELEMETRY_GENAI_ATTRIBUTES.USAGE_INPUT_TOKENS]: 999, // Should be ignored
+        [OPENTELEMETRY_GENAI_ATTRIBUTES.USAGE_OUTPUT_TOKENS]: 999, // Should be ignored
       },
     });
 
@@ -98,9 +98,9 @@ describe("extractTokenCount", () => {
   it("should handle string numbers correctly by treating them as non-numbers", () => {
     const span = createMockSpan({
       attributes: {
-        [LLM_ATTRIBUTES.TOKENS_TOTAL]: "150", // string number
-        [LLM_ATTRIBUTES.TOKENS_INPUT]: 80,
-        [LLM_ATTRIBUTES.TOKENS_OUTPUT]: 70,
+        [OPENTELEMETRY_GENAI_ATTRIBUTES.USAGE_TOTAL_TOKENS]: "150", // string number
+        [OPENTELEMETRY_GENAI_ATTRIBUTES.USAGE_INPUT_TOKENS]: 80,
+        [OPENTELEMETRY_GENAI_ATTRIBUTES.USAGE_OUTPUT_TOKENS]: 70,
       },
     });
 
@@ -113,9 +113,9 @@ describe("extractTokenCount", () => {
   it("should handle boolean values correctly", () => {
     const span = createMockSpan({
       attributes: {
-        [LLM_ATTRIBUTES.TOKENS_TOTAL]: true, // boolean
-        [LLM_ATTRIBUTES.TOKENS_INPUT]: false, // boolean
-        [LLM_ATTRIBUTES.TOKENS_OUTPUT]: 25,
+        [OPENTELEMETRY_GENAI_ATTRIBUTES.USAGE_TOTAL_TOKENS]: true, // boolean
+        [OPENTELEMETRY_GENAI_ATTRIBUTES.USAGE_INPUT_TOKENS]: false, // boolean
+        [OPENTELEMETRY_GENAI_ATTRIBUTES.USAGE_OUTPUT_TOKENS]: 25,
       },
     });
 
@@ -129,9 +129,9 @@ describe("extractTokenCount", () => {
   it("should handle array values correctly", () => {
     const span = createMockSpan({
       attributes: {
-        [LLM_ATTRIBUTES.TOKENS_TOTAL]: ["150", "200"], // array
-        [LLM_ATTRIBUTES.TOKENS_INPUT]: 30,
-        [LLM_ATTRIBUTES.TOKENS_OUTPUT]: 20,
+        [OPENTELEMETRY_GENAI_ATTRIBUTES.USAGE_TOTAL_TOKENS]: ["150", "200"], // array
+        [OPENTELEMETRY_GENAI_ATTRIBUTES.USAGE_INPUT_TOKENS]: 30,
+        [OPENTELEMETRY_GENAI_ATTRIBUTES.USAGE_OUTPUT_TOKENS]: 20,
       },
     });
 

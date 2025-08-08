@@ -1,12 +1,13 @@
-import type { Span } from "../types/open-telemetry.ts";
-import type { SpanCardType } from "../types/span.ts";
-import { calculateDuration } from "./calculate-duration.ts";
-import { convertTimestamp } from "./convert-timestamp.ts";
-import { determineSpanType } from "./determine-span-type.ts";
-import { extractCost } from "./extract-cost.ts";
-import { extractTokenCount } from "./extract-token-count.ts";
-import { generateTitle } from "./generate-title.ts";
-import { mapSpanStatus } from "./map-span-status.ts";
+import type { Span } from "../types/open-telemetry";
+import type { SpanCardType } from "../types/span";
+
+import { determineSpanCategory } from "../services/determine-span-category.ts";
+import { calculateDuration } from "./calculate-duration";
+import { convertTimestamp } from "./convert-timestamp";
+import { extractCost } from "./extract-cost";
+import { extractTokenCount } from "./extract-token-count";
+import { generateTitle } from "./generate-title";
+import { mapSpanStatus } from "./map-span-status";
 
 export const convertOTelSpanToSpanCard = (
   span: Span,
@@ -14,7 +15,7 @@ export const convertOTelSpanToSpanCard = (
 ): SpanCardType => {
   const duration = calculateDuration(span);
   const status = mapSpanStatus(span.status.code);
-  const spanType = determineSpanType(span);
+  const spanType = determineSpanCategory(span);
   const tokensCount = extractTokenCount(span);
   const cost = extractCost(span);
 

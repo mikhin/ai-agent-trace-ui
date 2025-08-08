@@ -1,12 +1,11 @@
 import { createRouter } from "@nanostores/router";
 
+import { AgentTracesTestPage } from "../pages/AgentTracesTestPage";
 import { BadgePage } from "../pages/BadgePage";
 import { HomePage } from "../pages/HomePage";
 import { OpenTelemetryAdaptersPage } from "../pages/OpenTelemetryAdaptersPage";
 import { SpanCardPage } from "../pages/SpanCardPage";
-import { SpanCardsListPage } from "../pages/SpanCardsListPage";
 import { TreeViewPage } from "../pages/TreeViewPage";
-import { AgentTracesTestPage } from "../pages/AgentTracesTestPage";
 
 export type RouteKey = keyof typeof ROUTES;
 
@@ -25,11 +24,6 @@ export const ROUTES = {
     path: "/span-card",
     component: SpanCardPage,
     label: "Span Card",
-  },
-  spanCardsList: {
-    path: "/span-cards-list",
-    component: SpanCardsListPage,
-    label: "Span Cards List",
   },
   treeView: {
     path: "/tree-view",

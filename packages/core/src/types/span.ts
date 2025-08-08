@@ -5,8 +5,18 @@ export type SpanCardType = {
   endTime: Date;
   duration: number;
   cost: number;
-  type: "LLM" | "TOOL" | "CHAIN" | "AGENT";
+  type: SpanCategory;
   children?: SpanCardType[];
   tokensCount: number;
   status: "success" | "error" | "running" | "warning";
 };
+
+export type SpanCategory =
+  | "llm_call"
+  | "tool_execution"
+  | "agent_invocation"
+  | "chain_operation"
+  | "retrieval"
+  | "embedding"
+  | "create_agent"
+  | "unknown";

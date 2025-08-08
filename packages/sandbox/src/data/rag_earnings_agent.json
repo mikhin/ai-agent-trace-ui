@@ -1,1205 +1,1207 @@
-[{
-  "resourceSpans": [
-    {
-      "resource": {
-        "attributes": [
-          {
-            "key": "telemetry.sdk.language",
-            "value": {
-              "stringValue": "python"
-            }
-          },
-          {
-            "key": "telemetry.sdk.name",
-            "value": {
-              "stringValue": "opentelemetry"
-            }
-          },
-          {
-            "key": "telemetry.sdk.version",
-            "value": {
-              "stringValue": "1.27.0"
-            }
-          },
-          {
-            "key": "service.name",
-            "value": {
-              "stringValue": "unknown_service"
-            }
-          }
-        ]
-      },
-      "scopeSpans": [
-        {
-          "scope": {
-            "name": "openinference.instrumentation.langchain",
-            "version": "0.1.43"
-          },
-          "spans": [
+[
+  {
+    "resourceSpans": [
+      {
+        "resource": {
+          "attributes": [
             {
-              "traceId": "tH12H+eb6IruQTQs3VJyaA==",
-              "spanId": "ziprJqtLsl8=",
-              "parentSpanId": "aQzz2qvtrKY=",
-              "name": "RunnableLambda",
-              "kind": "SPAN_KIND_INTERNAL",
-              "startTimeUnixNano": "1751474840301046016",
-              "endTimeUnixNano": "1751474840301361920",
-              "attributes": [
-                {
-                  "key": "app.name",
-                  "value": {
-                    "stringValue": "earnings-reports-rag"
-                  }
-                },
-                {
-                  "key": "app.environment",
-                  "value": {
-                    "stringValue": "development"
-                  }
-                },
-                {
-                  "key": "input.value",
-                  "value": {
-                    "stringValue": "what was meta's revenue in Q4 2023"
-                  }
-                },
-                {
-                  "key": "output.value",
-                  "value": {
-                    "stringValue": "what was meta's revenue in Q4 2023"
-                  }
-                },
-                {
-                  "key": "openinference.span.kind",
-                  "value": {
-                    "stringValue": "CHAIN"
-                  }
-                }
-              ],
-              "status": {
-                "code": "STATUS_CODE_OK"
-              },
-              "flags": 256
+              "key": "telemetry.sdk.language",
+              "value": {
+                "stringValue": "python"
+              }
             },
             {
-              "traceId": "tH12H+eb6IruQTQs3VJyaA==",
-              "spanId": "L2l7L7onxPI=",
-              "parentSpanId": "aQzz2qvtrKY=",
-              "name": "VectorStoreRetriever",
-              "kind": "SPAN_KIND_INTERNAL",
-              "startTimeUnixNano": "1751474840301667840",
-              "endTimeUnixNano": "1751474840705444096",
-              "attributes": [
-                {
-                  "key": "app.name",
-                  "value": {
-                    "stringValue": "earnings-reports-rag"
-                  }
-                },
-                {
-                  "key": "app.environment",
-                  "value": {
-                    "stringValue": "development"
-                  }
-                },
-                {
-                  "key": "input.value",
-                  "value": {
-                    "stringValue": "what was meta's revenue in Q4 2023"
-                  }
-                },
-                {
-                  "key": "output.value",
-                  "value": {
-                    "stringValue": "{\"documents\": [\"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\"]}"
-                  }
-                },
-                {
-                  "key": "output.mime_type",
-                  "value": {
-                    "stringValue": "application/json"
-                  }
-                },
-                {
-                  "key": "retrieval.documents.0.document.content",
-                  "value": {
-                    "stringValue": "Meta Platforms Inc. Q4 2023 Earnings Report\n\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\n\nKey Financial Highlights:\n- Revenue: $40.1 billion (25% YoY growth)\n- Net Income: $14.0 billion\n- Earnings Per Share: $5.33\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\n\nBusiness Segment Performance:\n- Family of Apps Revenue: $39.8 billion\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\n- Advertising Revenue: $38.7 billion"
-                  }
-                },
-                {
-                  "key": "retrieval.documents.0.document.metadata",
-                  "value": {
-                    "stringValue": "{\"source\": \"data/meta_q4_2023.txt\"}"
-                  }
-                },
-                {
-                  "key": "retrieval.documents.1.document.content",
-                  "value": {
-                    "stringValue": "Meta Platforms Inc. Q4 2023 Earnings Report\n\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\n\nKey Financial Highlights:\n- Revenue: $40.1 billion (25% YoY growth)\n- Net Income: $14.0 billion\n- Earnings Per Share: $5.33\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\n\nBusiness Segment Performance:\n- Family of Apps Revenue: $39.8 billion\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\n- Advertising Revenue: $38.7 billion"
-                  }
-                },
-                {
-                  "key": "retrieval.documents.1.document.metadata",
-                  "value": {
-                    "stringValue": "{\"source\": \"data/meta_q4_2023.txt\"}"
-                  }
-                },
-                {
-                  "key": "retrieval.documents.2.document.content",
-                  "value": {
-                    "stringValue": "Meta Platforms Inc. Q4 2023 Earnings Report\n\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\n\nKey Financial Highlights:\n- Revenue: $40.1 billion (25% YoY growth)\n- Net Income: $14.0 billion\n- Earnings Per Share: $5.33\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\n\nBusiness Segment Performance:\n- Family of Apps Revenue: $39.8 billion\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\n- Advertising Revenue: $38.7 billion"
-                  }
-                },
-                {
-                  "key": "retrieval.documents.2.document.metadata",
-                  "value": {
-                    "stringValue": "{\"source\": \"data/meta_q4_2023.txt\"}"
-                  }
-                },
-                {
-                  "key": "metadata",
-                  "value": {
-                    "stringValue": "{\"ls_retriever_name\": \"vectorstore\", \"ls_vector_store_provider\": \"Chroma\", \"ls_embedding_provider\": \"OpenAIEmbeddings\"}"
-                  }
-                },
-                {
-                  "key": "openinference.span.kind",
-                  "value": {
-                    "stringValue": "RETRIEVER"
-                  }
-                }
-              ],
-              "status": {
-                "code": "STATUS_CODE_OK"
-              },
-              "flags": 256
+              "key": "telemetry.sdk.name",
+              "value": {
+                "stringValue": "opentelemetry"
+              }
             },
             {
-              "traceId": "tH12H+eb6IruQTQs3VJyaA==",
-              "spanId": "aQzz2qvtrKY=",
-              "parentSpanId": "c0F14+AWfps=",
-              "name": "retrieve_documents",
-              "kind": "SPAN_KIND_INTERNAL",
-              "startTimeUnixNano": "1751474840297750016",
-              "endTimeUnixNano": "1751474840705913088",
-              "attributes": [
-                {
-                  "key": "app.name",
-                  "value": {
-                    "stringValue": "earnings-reports-rag"
-                  }
-                },
-                {
-                  "key": "app.environment",
-                  "value": {
-                    "stringValue": "development"
-                  }
-                },
-                {
-                  "key": "input.value",
-                  "value": {
-                    "stringValue": "what was meta's revenue in Q4 2023"
-                  }
-                },
-                {
-                  "key": "output.value",
-                  "value": {
-                    "stringValue": "{\"output\": [\"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\"]}"
-                  }
-                },
-                {
-                  "key": "output.mime_type",
-                  "value": {
-                    "stringValue": "application/json"
-                  }
-                },
-                {
-                  "key": "openinference.span.kind",
-                  "value": {
-                    "stringValue": "CHAIN"
-                  }
-                }
-              ],
-              "status": {
-                "code": "STATUS_CODE_OK"
-              },
-              "flags": 256
+              "key": "telemetry.sdk.version",
+              "value": {
+                "stringValue": "1.27.0"
+              }
             },
             {
-              "traceId": "tH12H+eb6IruQTQs3VJyaA==",
-              "spanId": "c0F14+AWfps=",
-              "parentSpanId": "B5/WK/VwYxA=",
-              "name": "RunnableParallel<context>",
-              "kind": "SPAN_KIND_INTERNAL",
-              "startTimeUnixNano": "1751474840296145920",
-              "endTimeUnixNano": "1751474840706126080",
-              "attributes": [
-                {
-                  "key": "app.name",
-                  "value": {
-                    "stringValue": "earnings-reports-rag"
-                  }
-                },
-                {
-                  "key": "app.environment",
-                  "value": {
-                    "stringValue": "development"
-                  }
-                },
-                {
-                  "key": "input.value",
-                  "value": {
-                    "stringValue": "what was meta's revenue in Q4 2023"
-                  }
-                },
-                {
-                  "key": "output.value",
-                  "value": {
-                    "stringValue": "{\"context\": [\"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\"]}"
-                  }
-                },
-                {
-                  "key": "output.mime_type",
-                  "value": {
-                    "stringValue": "application/json"
-                  }
-                },
-                {
-                  "key": "openinference.span.kind",
-                  "value": {
-                    "stringValue": "CHAIN"
-                  }
-                }
-              ],
-              "status": {
-                "code": "STATUS_CODE_OK"
-              },
-              "flags": 256
-            },
-            {
-              "traceId": "tH12H+eb6IruQTQs3VJyaA==",
-              "spanId": "B5/WK/VwYxA=",
-              "parentSpanId": "7Xjk53+Xypc=",
-              "name": "RunnableAssign<context>",
-              "kind": "SPAN_KIND_INTERNAL",
-              "startTimeUnixNano": "1751474840295572992",
-              "endTimeUnixNano": "1751474840706251008",
-              "attributes": [
-                {
-                  "key": "app.name",
-                  "value": {
-                    "stringValue": "earnings-reports-rag"
-                  }
-                },
-                {
-                  "key": "app.environment",
-                  "value": {
-                    "stringValue": "development"
-                  }
-                },
-                {
-                  "key": "input.value",
-                  "value": {
-                    "stringValue": "what was meta's revenue in Q4 2023"
-                  }
-                },
-                {
-                  "key": "output.value",
-                  "value": {
-                    "stringValue": "{\"input\": \"what was meta's revenue in Q4 2023\", \"context\": [\"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\"]}"
-                  }
-                },
-                {
-                  "key": "output.mime_type",
-                  "value": {
-                    "stringValue": "application/json"
-                  }
-                },
-                {
-                  "key": "openinference.span.kind",
-                  "value": {
-                    "stringValue": "CHAIN"
-                  }
-                }
-              ],
-              "status": {
-                "code": "STATUS_CODE_OK"
-              },
-              "flags": 256
-            },
-            {
-              "traceId": "tH12H+eb6IruQTQs3VJyaA==",
-              "spanId": "R97rcG3FkcI=",
-              "parentSpanId": "BjkYPQHSMog=",
-              "name": "format_docs",
-              "kind": "SPAN_KIND_INTERNAL",
-              "startTimeUnixNano": "1751474840708856064",
-              "endTimeUnixNano": "1751474840797831936",
-              "attributes": [
-                {
-                  "key": "app.name",
-                  "value": {
-                    "stringValue": "earnings-reports-rag"
-                  }
-                },
-                {
-                  "key": "app.environment",
-                  "value": {
-                    "stringValue": "development"
-                  }
-                },
-                {
-                  "key": "input.value",
-                  "value": {
-                    "stringValue": "{\"input\": \"what was meta's revenue in Q4 2023\", \"context\": [\"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\"]}"
-                  }
-                },
-                {
-                  "key": "input.mime_type",
-                  "value": {
-                    "stringValue": "application/json"
-                  }
-                },
-                {
-                  "key": "output.value",
-                  "value": {
-                    "stringValue": "Meta Platforms Inc. Q4 2023 Earnings Report\n\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\n\nKey Financial Highlights:\n- Revenue: $40.1 billion (25% YoY growth)\n- Net Income: $14.0 billion\n- Earnings Per Share: $5.33\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\n\nBusiness Segment Performance:\n- Family of Apps Revenue: $39.8 billion\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\n- Advertising Revenue: $38.7 billion\n\nMeta Platforms Inc. Q4 2023 Earnings Report\n\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\n\nKey Financial Highlights:\n- Revenue: $40.1 billion (25% YoY growth)\n- Net Income: $14.0 billion\n- Earnings Per Share: $5.33\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\n\nBusiness Segment Performance:\n- Family of Apps Revenue: $39.8 billion\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\n- Advertising Revenue: $38.7 billion\n\nMeta Platforms Inc. Q4 2023 Earnings Report\n\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\n\nKey Financial Highlights:\n- Revenue: $40.1 billion (25% YoY growth)\n- Net Income: $14.0 billion\n- Earnings Per Share: $5.33\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\n\nBusiness Segment Performance:\n- Family of Apps Revenue: $39.8 billion\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\n- Advertising Revenue: $38.7 billion"
-                  }
-                },
-                {
-                  "key": "openinference.span.kind",
-                  "value": {
-                    "stringValue": "CHAIN"
-                  }
-                }
-              ],
-              "status": {
-                "code": "STATUS_CODE_OK"
-              },
-              "flags": 256
-            },
-            {
-              "traceId": "tH12H+eb6IruQTQs3VJyaA==",
-              "spanId": "BjkYPQHSMog=",
-              "parentSpanId": "JefL64DGzGE=",
-              "name": "RunnableParallel<context>",
-              "kind": "SPAN_KIND_INTERNAL",
-              "startTimeUnixNano": "1751474840708518912",
-              "endTimeUnixNano": "1751474840798050048",
-              "attributes": [
-                {
-                  "key": "app.name",
-                  "value": {
-                    "stringValue": "earnings-reports-rag"
-                  }
-                },
-                {
-                  "key": "app.environment",
-                  "value": {
-                    "stringValue": "development"
-                  }
-                },
-                {
-                  "key": "input.value",
-                  "value": {
-                    "stringValue": "{\"input\": \"what was meta's revenue in Q4 2023\", \"context\": [\"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\"]}"
-                  }
-                },
-                {
-                  "key": "input.mime_type",
-                  "value": {
-                    "stringValue": "application/json"
-                  }
-                },
-                {
-                  "key": "output.value",
-                  "value": {
-                    "stringValue": "Meta Platforms Inc. Q4 2023 Earnings Report\n\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\n\nKey Financial Highlights:\n- Revenue: $40.1 billion (25% YoY growth)\n- Net Income: $14.0 billion\n- Earnings Per Share: $5.33\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\n\nBusiness Segment Performance:\n- Family of Apps Revenue: $39.8 billion\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\n- Advertising Revenue: $38.7 billion\n\nMeta Platforms Inc. Q4 2023 Earnings Report\n\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\n\nKey Financial Highlights:\n- Revenue: $40.1 billion (25% YoY growth)\n- Net Income: $14.0 billion\n- Earnings Per Share: $5.33\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\n\nBusiness Segment Performance:\n- Family of Apps Revenue: $39.8 billion\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\n- Advertising Revenue: $38.7 billion\n\nMeta Platforms Inc. Q4 2023 Earnings Report\n\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\n\nKey Financial Highlights:\n- Revenue: $40.1 billion (25% YoY growth)\n- Net Income: $14.0 billion\n- Earnings Per Share: $5.33\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\n\nBusiness Segment Performance:\n- Family of Apps Revenue: $39.8 billion\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\n- Advertising Revenue: $38.7 billion"
-                  }
-                },
-                {
-                  "key": "openinference.span.kind",
-                  "value": {
-                    "stringValue": "CHAIN"
-                  }
-                }
-              ],
-              "status": {
-                "code": "STATUS_CODE_OK"
-              },
-              "flags": 256
-            },
-            {
-              "traceId": "tH12H+eb6IruQTQs3VJyaA==",
-              "spanId": "JefL64DGzGE=",
-              "parentSpanId": "SlraH+XLGbw=",
-              "name": "format_inputs",
-              "kind": "SPAN_KIND_INTERNAL",
-              "startTimeUnixNano": "1751474840708200960",
-              "endTimeUnixNano": "1751474840798258176",
-              "attributes": [
-                {
-                  "key": "app.name",
-                  "value": {
-                    "stringValue": "earnings-reports-rag"
-                  }
-                },
-                {
-                  "key": "app.environment",
-                  "value": {
-                    "stringValue": "development"
-                  }
-                },
-                {
-                  "key": "input.value",
-                  "value": {
-                    "stringValue": "{\"input\": \"what was meta's revenue in Q4 2023\", \"context\": [\"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\"]}"
-                  }
-                },
-                {
-                  "key": "input.mime_type",
-                  "value": {
-                    "stringValue": "application/json"
-                  }
-                },
-                {
-                  "key": "output.value",
-                  "value": {
-                    "stringValue": "{\"input\": \"what was meta's revenue in Q4 2023\", \"context\": \"Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion\\n\\nMeta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion\\n\\nMeta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion\"}"
-                  }
-                },
-                {
-                  "key": "output.mime_type",
-                  "value": {
-                    "stringValue": "application/json"
-                  }
-                },
-                {
-                  "key": "openinference.span.kind",
-                  "value": {
-                    "stringValue": "CHAIN"
-                  }
-                }
-              ],
-              "status": {
-                "code": "STATUS_CODE_OK"
-              },
-              "flags": 256
-            },
-            {
-              "traceId": "tH12H+eb6IruQTQs3VJyaA==",
-              "spanId": "CQvcbpok5uU=",
-              "parentSpanId": "SlraH+XLGbw=",
-              "name": "ChatPromptTemplate",
-              "kind": "SPAN_KIND_INTERNAL",
-              "startTimeUnixNano": "1751474840798659072",
-              "endTimeUnixNano": "1751474840799022848",
-              "attributes": [
-                {
-                  "key": "app.name",
-                  "value": {
-                    "stringValue": "earnings-reports-rag"
-                  }
-                },
-                {
-                  "key": "app.environment",
-                  "value": {
-                    "stringValue": "development"
-                  }
-                },
-                {
-                  "key": "input.value",
-                  "value": {
-                    "stringValue": "{\"input\": \"what was meta's revenue in Q4 2023\", \"context\": \"Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion\\n\\nMeta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion\\n\\nMeta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion\"}"
-                  }
-                },
-                {
-                  "key": "input.mime_type",
-                  "value": {
-                    "stringValue": "application/json"
-                  }
-                },
-                {
-                  "key": "output.value",
-                  "value": {
-                    "stringValue": "{\"output\": \"messages=[HumanMessage(content=\\\"\\\\n    Answer the following question based on the provided context:\\\\n\\\\n    Context: Meta Platforms Inc. Q4 2023 Earnings Report\\\\n\\\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\\\n\\\\nKey Financial Highlights:\\\\n- Revenue: $40.1 billion (25% YoY growth)\\\\n- Net Income: $14.0 billion\\\\n- Earnings Per Share: $5.33\\\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\\\n\\\\nBusiness Segment Performance:\\\\n- Family of Apps Revenue: $39.8 billion\\\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\\\n- Advertising Revenue: $38.7 billion\\\\n\\\\nMeta Platforms Inc. Q4 2023 Earnings Report\\\\n\\\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\\\n\\\\nKey Financial Highlights:\\\\n- Revenue: $40.1 billion (25% YoY growth)\\\\n- Net Income: $14.0 billion\\\\n- Earnings Per Share: $5.33\\\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\\\n\\\\nBusiness Segment Performance:\\\\n- Family of Apps Revenue: $39.8 billion\\\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\\\n- Advertising Revenue: $38.7 billion\\\\n\\\\nMeta Platforms Inc. Q4 2023 Earnings Report\\\\n\\\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\\\n\\\\nKey Financial Highlights:\\\\n- Revenue: $40.1 billion (25% YoY growth)\\\\n- Net Income: $14.0 billion\\\\n- Earnings Per Share: $5.33\\\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\\\n\\\\nBusiness Segment Performance:\\\\n- Family of Apps Revenue: $39.8 billion\\\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\\\n- Advertising Revenue: $38.7 billion\\\\n\\\\n    Question: what was meta's revenue in Q4 2023\\\\n\\\\n    Answer:\\\\n    \\\", additional_kwargs={}, response_metadata={})]\"}"
-                  }
-                },
-                {
-                  "key": "output.mime_type",
-                  "value": {
-                    "stringValue": "application/json"
-                  }
-                },
-                {
-                  "key": "llm.prompt_template.template",
-                  "value": {
-                    "stringValue": "\n    Answer the following question based on the provided context:\n\n    Context: {context}\n\n    Question: {input}\n\n    Answer:\n    "
-                  }
-                },
-                {
-                  "key": "llm.prompt_template.variables",
-                  "value": {
-                    "stringValue": "{\"context\": \"Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion\\n\\nMeta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion\\n\\nMeta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion\", \"input\": \"what was meta's revenue in Q4 2023\"}"
-                  }
-                },
-                {
-                  "key": "openinference.span.kind",
-                  "value": {
-                    "stringValue": "UNKNOWN"
-                  }
-                }
-              ],
-              "status": {
-                "code": "STATUS_CODE_OK"
-              },
-              "flags": 256
+              "key": "service.name",
+              "value": {
+                "stringValue": "unknown_service"
+              }
             }
           ]
         },
-        {
-          "scope": {
-            "name": "quotientai.chroma"
-          },
-          "spans": [
-            {
-              "traceId": "tH12H+eb6IruQTQs3VJyaA==",
-              "spanId": "y5Bd/TcYois=",
-              "parentSpanId": "yP3finWLFco=",
-              "name": "chroma.collection.query",
-              "kind": "SPAN_KIND_INTERNAL",
-              "startTimeUnixNano": "1751474840669409000",
-              "endTimeUnixNano": "1751474840705076000",
-              "attributes": [
-                {
-                  "key": "app.name",
-                  "value": {
-                    "stringValue": "earnings-reports-rag"
-                  }
-                },
-                {
-                  "key": "app.environment",
-                  "value": {
-                    "stringValue": "development"
-                  }
-                },
-                {
-                  "key": "db.operation",
-                  "value": {
-                    "stringValue": "query"
-                  }
-                },
-                {
-                  "key": "db.collection.name",
-                  "value": {
-                    "stringValue": "langchain"
-                  }
-                },
-                {
-                  "key": "db.system.name",
-                  "value": {
-                    "stringValue": "chroma"
-                  }
-                },
-                {
-                  "key": "db.n_results",
-                  "value": {
-                    "intValue": "3"
-                  }
-                },
-                {
-                  "key": "db.vector_count",
-                  "value": {
-                    "intValue": "1"
-                  }
-                },
-                {
-                  "key": "db.operation.status",
-                  "value": {
-                    "stringValue": "completed"
-                  }
-                },
-                {
-                  "key": "db.ids_count",
-                  "value": {
-                    "intValue": "3"
-                  }
-                },
-                {
-                  "key": "db.query.retrieved_documents",
-                  "value": {
-                    "stringValue": "[{\"document.id\": \"4c0ca22f-5b37-44af-aca6-36e798c054c6\", \"document.score\": 0.25226640701293945, \"document.content\": \"Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion\", \"document.metadata\": \"{\\\"source\\\": \\\"data/meta_q4_2023.txt\\\"}\"}, {\"document.id\": \"381c8154-a66c-4de6-a92e-b89a0bdb27f1\", \"document.score\": 0.25226640701293945, \"document.content\": \"Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion\", \"document.metadata\": \"{\\\"source\\\": \\\"data/meta_q4_2023.txt\\\"}\"}, {\"document.id\": \"c8e1a069-3d64-4821-815f-2f49c577f8a8\", \"document.score\": 0.2523272633552551, \"document.content\": \"Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion\", \"document.metadata\": \"{\\\"source\\\": \\\"data/meta_q4_2023.txt\\\"}\"}]"
-                  }
-                }
-              ],
-              "status": {},
-              "flags": 256
-            }
-          ]
-        }
-      ]
-    }
-  ]
-},
-{
-  "resourceSpans": [
-    {
-      "resource": {
-        "attributes": [
+        "scopeSpans": [
           {
-            "key": "telemetry.sdk.language",
-            "value": {
-              "stringValue": "python"
-            }
+            "scope": {
+              "name": "openinference.instrumentation.langchain",
+              "version": "0.1.43"
+            },
+            "spans": [
+              {
+                "traceId": "tH12H+eb6IruQTQs3VJyaA==",
+                "spanId": "ziprJqtLsl8=",
+                "parentSpanId": "aQzz2qvtrKY=",
+                "name": "RunnableLambda",
+                "kind": "SPAN_KIND_INTERNAL",
+                "startTimeUnixNano": "1751474840301046016",
+                "endTimeUnixNano": "1751474840301361920",
+                "attributes": [
+                  {
+                    "key": "app.name",
+                    "value": {
+                      "stringValue": "earnings-reports-rag"
+                    }
+                  },
+                  {
+                    "key": "app.environment",
+                    "value": {
+                      "stringValue": "development"
+                    }
+                  },
+                  {
+                    "key": "input.value",
+                    "value": {
+                      "stringValue": "what was meta's revenue in Q4 2023"
+                    }
+                  },
+                  {
+                    "key": "output.value",
+                    "value": {
+                      "stringValue": "what was meta's revenue in Q4 2023"
+                    }
+                  },
+                  {
+                    "key": "openinference.span.kind",
+                    "value": {
+                      "stringValue": "CHAIN"
+                    }
+                  }
+                ],
+                "status": {
+                  "code": "STATUS_CODE_OK"
+                },
+                "flags": 256
+              },
+              {
+                "traceId": "tH12H+eb6IruQTQs3VJyaA==",
+                "spanId": "L2l7L7onxPI=",
+                "parentSpanId": "aQzz2qvtrKY=",
+                "name": "VectorStoreRetriever",
+                "kind": "SPAN_KIND_INTERNAL",
+                "startTimeUnixNano": "1751474840301667840",
+                "endTimeUnixNano": "1751474840705444096",
+                "attributes": [
+                  {
+                    "key": "app.name",
+                    "value": {
+                      "stringValue": "earnings-reports-rag"
+                    }
+                  },
+                  {
+                    "key": "app.environment",
+                    "value": {
+                      "stringValue": "development"
+                    }
+                  },
+                  {
+                    "key": "input.value",
+                    "value": {
+                      "stringValue": "what was meta's revenue in Q4 2023"
+                    }
+                  },
+                  {
+                    "key": "output.value",
+                    "value": {
+                      "stringValue": "{\"documents\": [\"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\"]}"
+                    }
+                  },
+                  {
+                    "key": "output.mime_type",
+                    "value": {
+                      "stringValue": "application/json"
+                    }
+                  },
+                  {
+                    "key": "retrieval.documents.0.document.content",
+                    "value": {
+                      "stringValue": "Meta Platforms Inc. Q4 2023 Earnings Report\n\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\n\nKey Financial Highlights:\n- Revenue: $40.1 billion (25% YoY growth)\n- Net Income: $14.0 billion\n- Earnings Per Share: $5.33\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\n\nBusiness Segment Performance:\n- Family of Apps Revenue: $39.8 billion\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\n- Advertising Revenue: $38.7 billion"
+                    }
+                  },
+                  {
+                    "key": "retrieval.documents.0.document.metadata",
+                    "value": {
+                      "stringValue": "{\"source\": \"data/meta_q4_2023.txt\"}"
+                    }
+                  },
+                  {
+                    "key": "retrieval.documents.1.document.content",
+                    "value": {
+                      "stringValue": "Meta Platforms Inc. Q4 2023 Earnings Report\n\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\n\nKey Financial Highlights:\n- Revenue: $40.1 billion (25% YoY growth)\n- Net Income: $14.0 billion\n- Earnings Per Share: $5.33\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\n\nBusiness Segment Performance:\n- Family of Apps Revenue: $39.8 billion\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\n- Advertising Revenue: $38.7 billion"
+                    }
+                  },
+                  {
+                    "key": "retrieval.documents.1.document.metadata",
+                    "value": {
+                      "stringValue": "{\"source\": \"data/meta_q4_2023.txt\"}"
+                    }
+                  },
+                  {
+                    "key": "retrieval.documents.2.document.content",
+                    "value": {
+                      "stringValue": "Meta Platforms Inc. Q4 2023 Earnings Report\n\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\n\nKey Financial Highlights:\n- Revenue: $40.1 billion (25% YoY growth)\n- Net Income: $14.0 billion\n- Earnings Per Share: $5.33\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\n\nBusiness Segment Performance:\n- Family of Apps Revenue: $39.8 billion\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\n- Advertising Revenue: $38.7 billion"
+                    }
+                  },
+                  {
+                    "key": "retrieval.documents.2.document.metadata",
+                    "value": {
+                      "stringValue": "{\"source\": \"data/meta_q4_2023.txt\"}"
+                    }
+                  },
+                  {
+                    "key": "metadata",
+                    "value": {
+                      "stringValue": "{\"ls_retriever_name\": \"vectorstore\", \"ls_vector_store_provider\": \"Chroma\", \"ls_embedding_provider\": \"OpenAIEmbeddings\"}"
+                    }
+                  },
+                  {
+                    "key": "openinference.span.kind",
+                    "value": {
+                      "stringValue": "RETRIEVER"
+                    }
+                  }
+                ],
+                "status": {
+                  "code": "STATUS_CODE_OK"
+                },
+                "flags": 256
+              },
+              {
+                "traceId": "tH12H+eb6IruQTQs3VJyaA==",
+                "spanId": "aQzz2qvtrKY=",
+                "parentSpanId": "c0F14+AWfps=",
+                "name": "retrieve_documents",
+                "kind": "SPAN_KIND_INTERNAL",
+                "startTimeUnixNano": "1751474840297750016",
+                "endTimeUnixNano": "1751474840705913088",
+                "attributes": [
+                  {
+                    "key": "app.name",
+                    "value": {
+                      "stringValue": "earnings-reports-rag"
+                    }
+                  },
+                  {
+                    "key": "app.environment",
+                    "value": {
+                      "stringValue": "development"
+                    }
+                  },
+                  {
+                    "key": "input.value",
+                    "value": {
+                      "stringValue": "what was meta's revenue in Q4 2023"
+                    }
+                  },
+                  {
+                    "key": "output.value",
+                    "value": {
+                      "stringValue": "{\"output\": [\"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\"]}"
+                    }
+                  },
+                  {
+                    "key": "output.mime_type",
+                    "value": {
+                      "stringValue": "application/json"
+                    }
+                  },
+                  {
+                    "key": "openinference.span.kind",
+                    "value": {
+                      "stringValue": "CHAIN"
+                    }
+                  }
+                ],
+                "status": {
+                  "code": "STATUS_CODE_OK"
+                },
+                "flags": 256
+              },
+              {
+                "traceId": "tH12H+eb6IruQTQs3VJyaA==",
+                "spanId": "c0F14+AWfps=",
+                "parentSpanId": "B5/WK/VwYxA=",
+                "name": "RunnableParallel<context>",
+                "kind": "SPAN_KIND_INTERNAL",
+                "startTimeUnixNano": "1751474840296145920",
+                "endTimeUnixNano": "1751474840706126080",
+                "attributes": [
+                  {
+                    "key": "app.name",
+                    "value": {
+                      "stringValue": "earnings-reports-rag"
+                    }
+                  },
+                  {
+                    "key": "app.environment",
+                    "value": {
+                      "stringValue": "development"
+                    }
+                  },
+                  {
+                    "key": "input.value",
+                    "value": {
+                      "stringValue": "what was meta's revenue in Q4 2023"
+                    }
+                  },
+                  {
+                    "key": "output.value",
+                    "value": {
+                      "stringValue": "{\"context\": [\"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\"]}"
+                    }
+                  },
+                  {
+                    "key": "output.mime_type",
+                    "value": {
+                      "stringValue": "application/json"
+                    }
+                  },
+                  {
+                    "key": "openinference.span.kind",
+                    "value": {
+                      "stringValue": "CHAIN"
+                    }
+                  }
+                ],
+                "status": {
+                  "code": "STATUS_CODE_OK"
+                },
+                "flags": 256
+              },
+              {
+                "traceId": "tH12H+eb6IruQTQs3VJyaA==",
+                "spanId": "B5/WK/VwYxA=",
+                "parentSpanId": "7Xjk53+Xypc=",
+                "name": "RunnableAssign<context>",
+                "kind": "SPAN_KIND_INTERNAL",
+                "startTimeUnixNano": "1751474840295572992",
+                "endTimeUnixNano": "1751474840706251008",
+                "attributes": [
+                  {
+                    "key": "app.name",
+                    "value": {
+                      "stringValue": "earnings-reports-rag"
+                    }
+                  },
+                  {
+                    "key": "app.environment",
+                    "value": {
+                      "stringValue": "development"
+                    }
+                  },
+                  {
+                    "key": "input.value",
+                    "value": {
+                      "stringValue": "what was meta's revenue in Q4 2023"
+                    }
+                  },
+                  {
+                    "key": "output.value",
+                    "value": {
+                      "stringValue": "{\"input\": \"what was meta's revenue in Q4 2023\", \"context\": [\"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\"]}"
+                    }
+                  },
+                  {
+                    "key": "output.mime_type",
+                    "value": {
+                      "stringValue": "application/json"
+                    }
+                  },
+                  {
+                    "key": "openinference.span.kind",
+                    "value": {
+                      "stringValue": "CHAIN"
+                    }
+                  }
+                ],
+                "status": {
+                  "code": "STATUS_CODE_OK"
+                },
+                "flags": 256
+              },
+              {
+                "traceId": "tH12H+eb6IruQTQs3VJyaA==",
+                "spanId": "R97rcG3FkcI=",
+                "parentSpanId": "BjkYPQHSMog=",
+                "name": "format_docs",
+                "kind": "SPAN_KIND_INTERNAL",
+                "startTimeUnixNano": "1751474840708856064",
+                "endTimeUnixNano": "1751474840797831936",
+                "attributes": [
+                  {
+                    "key": "app.name",
+                    "value": {
+                      "stringValue": "earnings-reports-rag"
+                    }
+                  },
+                  {
+                    "key": "app.environment",
+                    "value": {
+                      "stringValue": "development"
+                    }
+                  },
+                  {
+                    "key": "input.value",
+                    "value": {
+                      "stringValue": "{\"input\": \"what was meta's revenue in Q4 2023\", \"context\": [\"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\"]}"
+                    }
+                  },
+                  {
+                    "key": "input.mime_type",
+                    "value": {
+                      "stringValue": "application/json"
+                    }
+                  },
+                  {
+                    "key": "output.value",
+                    "value": {
+                      "stringValue": "Meta Platforms Inc. Q4 2023 Earnings Report\n\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\n\nKey Financial Highlights:\n- Revenue: $40.1 billion (25% YoY growth)\n- Net Income: $14.0 billion\n- Earnings Per Share: $5.33\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\n\nBusiness Segment Performance:\n- Family of Apps Revenue: $39.8 billion\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\n- Advertising Revenue: $38.7 billion\n\nMeta Platforms Inc. Q4 2023 Earnings Report\n\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\n\nKey Financial Highlights:\n- Revenue: $40.1 billion (25% YoY growth)\n- Net Income: $14.0 billion\n- Earnings Per Share: $5.33\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\n\nBusiness Segment Performance:\n- Family of Apps Revenue: $39.8 billion\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\n- Advertising Revenue: $38.7 billion\n\nMeta Platforms Inc. Q4 2023 Earnings Report\n\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\n\nKey Financial Highlights:\n- Revenue: $40.1 billion (25% YoY growth)\n- Net Income: $14.0 billion\n- Earnings Per Share: $5.33\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\n\nBusiness Segment Performance:\n- Family of Apps Revenue: $39.8 billion\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\n- Advertising Revenue: $38.7 billion"
+                    }
+                  },
+                  {
+                    "key": "openinference.span.kind",
+                    "value": {
+                      "stringValue": "CHAIN"
+                    }
+                  }
+                ],
+                "status": {
+                  "code": "STATUS_CODE_OK"
+                },
+                "flags": 256
+              },
+              {
+                "traceId": "tH12H+eb6IruQTQs3VJyaA==",
+                "spanId": "BjkYPQHSMog=",
+                "parentSpanId": "JefL64DGzGE=",
+                "name": "RunnableParallel<context>",
+                "kind": "SPAN_KIND_INTERNAL",
+                "startTimeUnixNano": "1751474840708518912",
+                "endTimeUnixNano": "1751474840798050048",
+                "attributes": [
+                  {
+                    "key": "app.name",
+                    "value": {
+                      "stringValue": "earnings-reports-rag"
+                    }
+                  },
+                  {
+                    "key": "app.environment",
+                    "value": {
+                      "stringValue": "development"
+                    }
+                  },
+                  {
+                    "key": "input.value",
+                    "value": {
+                      "stringValue": "{\"input\": \"what was meta's revenue in Q4 2023\", \"context\": [\"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\"]}"
+                    }
+                  },
+                  {
+                    "key": "input.mime_type",
+                    "value": {
+                      "stringValue": "application/json"
+                    }
+                  },
+                  {
+                    "key": "output.value",
+                    "value": {
+                      "stringValue": "Meta Platforms Inc. Q4 2023 Earnings Report\n\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\n\nKey Financial Highlights:\n- Revenue: $40.1 billion (25% YoY growth)\n- Net Income: $14.0 billion\n- Earnings Per Share: $5.33\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\n\nBusiness Segment Performance:\n- Family of Apps Revenue: $39.8 billion\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\n- Advertising Revenue: $38.7 billion\n\nMeta Platforms Inc. Q4 2023 Earnings Report\n\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\n\nKey Financial Highlights:\n- Revenue: $40.1 billion (25% YoY growth)\n- Net Income: $14.0 billion\n- Earnings Per Share: $5.33\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\n\nBusiness Segment Performance:\n- Family of Apps Revenue: $39.8 billion\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\n- Advertising Revenue: $38.7 billion\n\nMeta Platforms Inc. Q4 2023 Earnings Report\n\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\n\nKey Financial Highlights:\n- Revenue: $40.1 billion (25% YoY growth)\n- Net Income: $14.0 billion\n- Earnings Per Share: $5.33\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\n\nBusiness Segment Performance:\n- Family of Apps Revenue: $39.8 billion\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\n- Advertising Revenue: $38.7 billion"
+                    }
+                  },
+                  {
+                    "key": "openinference.span.kind",
+                    "value": {
+                      "stringValue": "CHAIN"
+                    }
+                  }
+                ],
+                "status": {
+                  "code": "STATUS_CODE_OK"
+                },
+                "flags": 256
+              },
+              {
+                "traceId": "tH12H+eb6IruQTQs3VJyaA==",
+                "spanId": "JefL64DGzGE=",
+                "parentSpanId": "SlraH+XLGbw=",
+                "name": "format_inputs",
+                "kind": "SPAN_KIND_INTERNAL",
+                "startTimeUnixNano": "1751474840708200960",
+                "endTimeUnixNano": "1751474840798258176",
+                "attributes": [
+                  {
+                    "key": "app.name",
+                    "value": {
+                      "stringValue": "earnings-reports-rag"
+                    }
+                  },
+                  {
+                    "key": "app.environment",
+                    "value": {
+                      "stringValue": "development"
+                    }
+                  },
+                  {
+                    "key": "input.value",
+                    "value": {
+                      "stringValue": "{\"input\": \"what was meta's revenue in Q4 2023\", \"context\": [\"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\"]}"
+                    }
+                  },
+                  {
+                    "key": "input.mime_type",
+                    "value": {
+                      "stringValue": "application/json"
+                    }
+                  },
+                  {
+                    "key": "output.value",
+                    "value": {
+                      "stringValue": "{\"input\": \"what was meta's revenue in Q4 2023\", \"context\": \"Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion\\n\\nMeta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion\\n\\nMeta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion\"}"
+                    }
+                  },
+                  {
+                    "key": "output.mime_type",
+                    "value": {
+                      "stringValue": "application/json"
+                    }
+                  },
+                  {
+                    "key": "openinference.span.kind",
+                    "value": {
+                      "stringValue": "CHAIN"
+                    }
+                  }
+                ],
+                "status": {
+                  "code": "STATUS_CODE_OK"
+                },
+                "flags": 256
+              },
+              {
+                "traceId": "tH12H+eb6IruQTQs3VJyaA==",
+                "spanId": "CQvcbpok5uU=",
+                "parentSpanId": "SlraH+XLGbw=",
+                "name": "ChatPromptTemplate",
+                "kind": "SPAN_KIND_INTERNAL",
+                "startTimeUnixNano": "1751474840798659072",
+                "endTimeUnixNano": "1751474840799022848",
+                "attributes": [
+                  {
+                    "key": "app.name",
+                    "value": {
+                      "stringValue": "earnings-reports-rag"
+                    }
+                  },
+                  {
+                    "key": "app.environment",
+                    "value": {
+                      "stringValue": "development"
+                    }
+                  },
+                  {
+                    "key": "input.value",
+                    "value": {
+                      "stringValue": "{\"input\": \"what was meta's revenue in Q4 2023\", \"context\": \"Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion\\n\\nMeta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion\\n\\nMeta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion\"}"
+                    }
+                  },
+                  {
+                    "key": "input.mime_type",
+                    "value": {
+                      "stringValue": "application/json"
+                    }
+                  },
+                  {
+                    "key": "output.value",
+                    "value": {
+                      "stringValue": "{\"output\": \"messages=[HumanMessage(content=\\\"\\\\n    Answer the following question based on the provided context:\\\\n\\\\n    Context: Meta Platforms Inc. Q4 2023 Earnings Report\\\\n\\\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\\\n\\\\nKey Financial Highlights:\\\\n- Revenue: $40.1 billion (25% YoY growth)\\\\n- Net Income: $14.0 billion\\\\n- Earnings Per Share: $5.33\\\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\\\n\\\\nBusiness Segment Performance:\\\\n- Family of Apps Revenue: $39.8 billion\\\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\\\n- Advertising Revenue: $38.7 billion\\\\n\\\\nMeta Platforms Inc. Q4 2023 Earnings Report\\\\n\\\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\\\n\\\\nKey Financial Highlights:\\\\n- Revenue: $40.1 billion (25% YoY growth)\\\\n- Net Income: $14.0 billion\\\\n- Earnings Per Share: $5.33\\\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\\\n\\\\nBusiness Segment Performance:\\\\n- Family of Apps Revenue: $39.8 billion\\\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\\\n- Advertising Revenue: $38.7 billion\\\\n\\\\nMeta Platforms Inc. Q4 2023 Earnings Report\\\\n\\\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\\\n\\\\nKey Financial Highlights:\\\\n- Revenue: $40.1 billion (25% YoY growth)\\\\n- Net Income: $14.0 billion\\\\n- Earnings Per Share: $5.33\\\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\\\n\\\\nBusiness Segment Performance:\\\\n- Family of Apps Revenue: $39.8 billion\\\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\\\n- Advertising Revenue: $38.7 billion\\\\n\\\\n    Question: what was meta's revenue in Q4 2023\\\\n\\\\n    Answer:\\\\n    \\\", additional_kwargs={}, response_metadata={})]\"}"
+                    }
+                  },
+                  {
+                    "key": "output.mime_type",
+                    "value": {
+                      "stringValue": "application/json"
+                    }
+                  },
+                  {
+                    "key": "llm.prompt_template.template",
+                    "value": {
+                      "stringValue": "\n    Answer the following question based on the provided context:\n\n    Context: {context}\n\n    Question: {input}\n\n    Answer:\n    "
+                    }
+                  },
+                  {
+                    "key": "llm.prompt_template.variables",
+                    "value": {
+                      "stringValue": "{\"context\": \"Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion\\n\\nMeta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion\\n\\nMeta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion\", \"input\": \"what was meta's revenue in Q4 2023\"}"
+                    }
+                  },
+                  {
+                    "key": "openinference.span.kind",
+                    "value": {
+                      "stringValue": "UNKNOWN"
+                    }
+                  }
+                ],
+                "status": {
+                  "code": "STATUS_CODE_OK"
+                },
+                "flags": 256
+              }
+            ]
           },
           {
-            "key": "telemetry.sdk.name",
-            "value": {
-              "stringValue": "opentelemetry"
-            }
-          },
-          {
-            "key": "telemetry.sdk.version",
-            "value": {
-              "stringValue": "1.27.0"
-            }
-          },
-          {
-            "key": "service.name",
-            "value": {
-              "stringValue": "unknown_service"
-            }
+            "scope": {
+              "name": "quotientai.chroma"
+            },
+            "spans": [
+              {
+                "traceId": "tH12H+eb6IruQTQs3VJyaA==",
+                "spanId": "y5Bd/TcYois=",
+                "parentSpanId": "yP3finWLFco=",
+                "name": "chroma.collection.query",
+                "kind": "SPAN_KIND_INTERNAL",
+                "startTimeUnixNano": "1751474840669409000",
+                "endTimeUnixNano": "1751474840705076000",
+                "attributes": [
+                  {
+                    "key": "app.name",
+                    "value": {
+                      "stringValue": "earnings-reports-rag"
+                    }
+                  },
+                  {
+                    "key": "app.environment",
+                    "value": {
+                      "stringValue": "development"
+                    }
+                  },
+                  {
+                    "key": "db.operation",
+                    "value": {
+                      "stringValue": "query"
+                    }
+                  },
+                  {
+                    "key": "db.collection.name",
+                    "value": {
+                      "stringValue": "langchain"
+                    }
+                  },
+                  {
+                    "key": "db.system.name",
+                    "value": {
+                      "stringValue": "chroma"
+                    }
+                  },
+                  {
+                    "key": "db.n_results",
+                    "value": {
+                      "intValue": "3"
+                    }
+                  },
+                  {
+                    "key": "db.vector_count",
+                    "value": {
+                      "intValue": "1"
+                    }
+                  },
+                  {
+                    "key": "db.operation.status",
+                    "value": {
+                      "stringValue": "completed"
+                    }
+                  },
+                  {
+                    "key": "db.ids_count",
+                    "value": {
+                      "intValue": "3"
+                    }
+                  },
+                  {
+                    "key": "db.query.retrieved_documents",
+                    "value": {
+                      "stringValue": "[{\"document.id\": \"4c0ca22f-5b37-44af-aca6-36e798c054c6\", \"document.score\": 0.25226640701293945, \"document.content\": \"Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion\", \"document.metadata\": \"{\\\"source\\\": \\\"data/meta_q4_2023.txt\\\"}\"}, {\"document.id\": \"381c8154-a66c-4de6-a92e-b89a0bdb27f1\", \"document.score\": 0.25226640701293945, \"document.content\": \"Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion\", \"document.metadata\": \"{\\\"source\\\": \\\"data/meta_q4_2023.txt\\\"}\"}, {\"document.id\": \"c8e1a069-3d64-4821-815f-2f49c577f8a8\", \"document.score\": 0.2523272633552551, \"document.content\": \"Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion\", \"document.metadata\": \"{\\\"source\\\": \\\"data/meta_q4_2023.txt\\\"}\"}]"
+                    }
+                  }
+                ],
+                "status": {},
+                "flags": 256
+              }
+            ]
           }
         ]
-      },
-      "scopeSpans": [
-        {
-          "scope": {
-            "name": "openinference.instrumentation.langchain",
-            "version": "0.1.43"
-          },
-          "spans": [
+      }
+    ]
+  },
+  {
+    "resourceSpans": [
+      {
+        "resource": {
+          "attributes": [
             {
-              "traceId": "tH12H+eb6IruQTQs3VJyaA==",
-              "spanId": "GcmtOA5tpAU=",
-              "parentSpanId": "SlraH+XLGbw=",
-              "name": "ChatOpenAI",
-              "kind": "SPAN_KIND_INTERNAL",
-              "startTimeUnixNano": "1751474840799428096",
-              "endTimeUnixNano": "1751474842073609984",
-              "attributes": [
-                {
-                  "key": "app.name",
-                  "value": {
-                    "stringValue": "earnings-reports-rag"
-                  }
-                },
-                {
-                  "key": "app.environment",
-                  "value": {
-                    "stringValue": "development"
-                  }
-                },
-                {
-                  "key": "input.value",
-                  "value": {
-                    "stringValue": "{\"messages\": [[{\"lc\": 1, \"type\": \"constructor\", \"id\": [\"langchain\", \"schema\", \"messages\", \"HumanMessage\"], \"kwargs\": {\"content\": \"\\n    Answer the following question based on the provided context:\\n\\n    Context: Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion\\n\\nMeta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion\\n\\nMeta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion\\n\\n    Question: what was meta's revenue in Q4 2023\\n\\n    Answer:\\n    \", \"type\": \"human\"}}]]}"
-                  }
-                },
-                {
-                  "key": "input.mime_type",
-                  "value": {
-                    "stringValue": "application/json"
-                  }
-                },
-                {
-                  "key": "output.value",
-                  "value": {
-                    "stringValue": "{\"generations\": [[{\"generation_info\": {\"finish_reason\": \"stop\", \"logprobs\": null}, \"type\": \"ChatGeneration\", \"message\": {\"lc\": 1, \"type\": \"constructor\", \"id\": [\"langchain\", \"schema\", \"messages\", \"AIMessage\"], \"kwargs\": {\"content\": \"Meta Platforms Inc.'s revenue in Q4 2023 was $40.1 billion.\", \"additional_kwargs\": {\"refusal\": null}, \"response_metadata\": {\"token_usage\": {\"completion_tokens\": 19, \"prompt_tokens\": 629, \"total_tokens\": 648, \"completion_tokens_details\": {\"accepted_prediction_tokens\": 0, \"audio_tokens\": 0, \"reasoning_tokens\": 0, \"rejected_prediction_tokens\": 0}, \"prompt_tokens_details\": {\"audio_tokens\": 0, \"cached_tokens\": 0}}, \"model_name\": \"gpt-3.5-turbo-0125\", \"system_fingerprint\": null, \"id\": \"chatcmpl-Bouu9TLAdtJGh8fN177uNsTXYgPzN\", \"service_tier\": \"default\", \"finish_reason\": \"stop\", \"logprobs\": null}, \"type\": \"ai\", \"id\": \"run--2aa38272-edfb-4c43-aa00-666ae00e16a7-0\", \"usage_metadata\": {\"input_tokens\": 629, \"output_tokens\": 19, \"total_tokens\": 648, \"input_token_details\": {\"audio\": 0, \"cache_read\": 0}, \"output_token_details\": {\"audio\": 0, \"reasoning\": 0}}, \"tool_calls\": [], \"invalid_tool_calls\": []}}, \"text\": \"Meta Platforms Inc.'s revenue in Q4 2023 was $40.1 billion.\"}]], \"llm_output\": {\"token_usage\": {\"completion_tokens\": 19, \"prompt_tokens\": 629, \"total_tokens\": 648, \"completion_tokens_details\": {\"accepted_prediction_tokens\": 0, \"audio_tokens\": 0, \"reasoning_tokens\": 0, \"rejected_prediction_tokens\": 0}, \"prompt_tokens_details\": {\"audio_tokens\": 0, \"cached_tokens\": 0}}, \"model_name\": \"gpt-3.5-turbo-0125\", \"system_fingerprint\": null, \"id\": \"chatcmpl-Bouu9TLAdtJGh8fN177uNsTXYgPzN\", \"service_tier\": \"default\"}, \"run\": null, \"type\": \"LLMResult\"}"
-                  }
-                },
-                {
-                  "key": "output.mime_type",
-                  "value": {
-                    "stringValue": "application/json"
-                  }
-                },
-                {
-                  "key": "llm.input_messages.0.message.role",
-                  "value": {
-                    "stringValue": "user"
-                  }
-                },
-                {
-                  "key": "llm.input_messages.0.message.content",
-                  "value": {
-                    "stringValue": "\n    Answer the following question based on the provided context:\n\n    Context: Meta Platforms Inc. Q4 2023 Earnings Report\n\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\n\nKey Financial Highlights:\n- Revenue: $40.1 billion (25% YoY growth)\n- Net Income: $14.0 billion\n- Earnings Per Share: $5.33\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\n\nBusiness Segment Performance:\n- Family of Apps Revenue: $39.8 billion\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\n- Advertising Revenue: $38.7 billion\n\nMeta Platforms Inc. Q4 2023 Earnings Report\n\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\n\nKey Financial Highlights:\n- Revenue: $40.1 billion (25% YoY growth)\n- Net Income: $14.0 billion\n- Earnings Per Share: $5.33\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\n\nBusiness Segment Performance:\n- Family of Apps Revenue: $39.8 billion\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\n- Advertising Revenue: $38.7 billion\n\nMeta Platforms Inc. Q4 2023 Earnings Report\n\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\n\nKey Financial Highlights:\n- Revenue: $40.1 billion (25% YoY growth)\n- Net Income: $14.0 billion\n- Earnings Per Share: $5.33\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\n\nBusiness Segment Performance:\n- Family of Apps Revenue: $39.8 billion\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\n- Advertising Revenue: $38.7 billion\n\n    Question: what was meta's revenue in Q4 2023\n\n    Answer:\n    "
-                  }
-                },
-                {
-                  "key": "llm.output_messages.0.message.role",
-                  "value": {
-                    "stringValue": "assistant"
-                  }
-                },
-                {
-                  "key": "llm.output_messages.0.message.content",
-                  "value": {
-                    "stringValue": "Meta Platforms Inc.'s revenue in Q4 2023 was $40.1 billion."
-                  }
-                },
-                {
-                  "key": "llm.invocation_parameters",
-                  "value": {
-                    "stringValue": "{\"model\": \"gpt-3.5-turbo\", \"model_name\": \"gpt-3.5-turbo\", \"stream\": false, \"temperature\": 0.1, \"_type\": \"openai-chat\", \"stop\": null}"
-                  }
-                },
-                {
-                  "key": "llm.model_name",
-                  "value": {
-                    "stringValue": "gpt-3.5-turbo"
-                  }
-                },
-                {
-                  "key": "llm.token_count.prompt",
-                  "value": {
-                    "intValue": "629"
-                  }
-                },
-                {
-                  "key": "llm.token_count.completion",
-                  "value": {
-                    "intValue": "19"
-                  }
-                },
-                {
-                  "key": "llm.token_count.total",
-                  "value": {
-                    "intValue": "648"
-                  }
-                },
-                {
-                  "key": "llm.token_count.completion_details.audio",
-                  "value": {
-                    "intValue": "0"
-                  }
-                },
-                {
-                  "key": "llm.token_count.completion_details.reasoning",
-                  "value": {
-                    "intValue": "0"
-                  }
-                },
-                {
-                  "key": "llm.token_count.prompt_details.audio",
-                  "value": {
-                    "intValue": "0"
-                  }
-                },
-                {
-                  "key": "llm.token_count.prompt_details.cache_read",
-                  "value": {
-                    "intValue": "0"
-                  }
-                },
-                {
-                  "key": "metadata",
-                  "value": {
-                    "stringValue": "{\"ls_provider\": \"openai\", \"ls_model_name\": \"gpt-3.5-turbo\", \"ls_model_type\": \"chat\", \"ls_temperature\": 0.1}"
-                  }
-                },
-                {
-                  "key": "openinference.span.kind",
-                  "value": {
-                    "stringValue": "LLM"
-                  }
-                }
-              ],
-              "status": {
-                "code": "STATUS_CODE_OK"
-              },
-              "flags": 256
+              "key": "telemetry.sdk.language",
+              "value": {
+                "stringValue": "python"
+              }
             },
             {
-              "traceId": "tH12H+eb6IruQTQs3VJyaA==",
-              "spanId": "5eCPQRSXnjI=",
-              "parentSpanId": "SlraH+XLGbw=",
-              "name": "StrOutputParser",
-              "kind": "SPAN_KIND_INTERNAL",
-              "startTimeUnixNano": "1751474842075184128",
-              "endTimeUnixNano": "1751474842075719168",
-              "attributes": [
-                {
-                  "key": "app.name",
-                  "value": {
-                    "stringValue": "earnings-reports-rag"
-                  }
-                },
-                {
-                  "key": "app.environment",
-                  "value": {
-                    "stringValue": "development"
-                  }
-                },
-                {
-                  "key": "input.value",
-                  "value": {
-                    "stringValue": "{\"input\": \"content=\\\"Meta Platforms Inc.'s revenue in Q4 2023 was $40.1 billion.\\\" additional_kwargs={'refusal': None} response_metadata={'token_usage': {'completion_tokens': 19, 'prompt_tokens': 629, 'total_tokens': 648, 'completion_tokens_details': {'accepted_prediction_tokens': 0, 'audio_tokens': 0, 'reasoning_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}, 'model_name': 'gpt-3.5-turbo-0125', 'system_fingerprint': None, 'id': 'chatcmpl-Bouu9TLAdtJGh8fN177uNsTXYgPzN', 'service_tier': 'default', 'finish_reason': 'stop', 'logprobs': None} id='run--2aa38272-edfb-4c43-aa00-666ae00e16a7-0' usage_metadata={'input_tokens': 629, 'output_tokens': 19, 'total_tokens': 648, 'input_token_details': {'audio': 0, 'cache_read': 0}, 'output_token_details': {'audio': 0, 'reasoning': 0}}\"}"
-                  }
-                },
-                {
-                  "key": "input.mime_type",
-                  "value": {
-                    "stringValue": "application/json"
-                  }
-                },
-                {
-                  "key": "output.value",
-                  "value": {
-                    "stringValue": "Meta Platforms Inc.'s revenue in Q4 2023 was $40.1 billion."
-                  }
-                },
-                {
-                  "key": "openinference.span.kind",
-                  "value": {
-                    "stringValue": "UNKNOWN"
-                  }
-                }
-              ],
-              "status": {
-                "code": "STATUS_CODE_OK"
-              },
-              "flags": 256
+              "key": "telemetry.sdk.name",
+              "value": {
+                "stringValue": "opentelemetry"
+              }
             },
             {
-              "traceId": "tH12H+eb6IruQTQs3VJyaA==",
-              "spanId": "SlraH+XLGbw=",
-              "parentSpanId": "k3bQrQkdTc8=",
-              "name": "stuff_documents_chain",
-              "kind": "SPAN_KIND_INTERNAL",
-              "startTimeUnixNano": "1751474840707863040",
-              "endTimeUnixNano": "1751474842075954944",
-              "attributes": [
-                {
-                  "key": "app.name",
-                  "value": {
-                    "stringValue": "earnings-reports-rag"
-                  }
-                },
-                {
-                  "key": "app.environment",
-                  "value": {
-                    "stringValue": "development"
-                  }
-                },
-                {
-                  "key": "input.value",
-                  "value": {
-                    "stringValue": "{\"input\": \"what was meta's revenue in Q4 2023\", \"context\": [\"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\"]}"
-                  }
-                },
-                {
-                  "key": "input.mime_type",
-                  "value": {
-                    "stringValue": "application/json"
-                  }
-                },
-                {
-                  "key": "output.value",
-                  "value": {
-                    "stringValue": "Meta Platforms Inc.'s revenue in Q4 2023 was $40.1 billion."
-                  }
-                },
-                {
-                  "key": "openinference.span.kind",
-                  "value": {
-                    "stringValue": "CHAIN"
-                  }
-                }
-              ],
-              "status": {
-                "code": "STATUS_CODE_OK"
-              },
-              "flags": 256
+              "key": "telemetry.sdk.version",
+              "value": {
+                "stringValue": "1.27.0"
+              }
             },
             {
-              "traceId": "tH12H+eb6IruQTQs3VJyaA==",
-              "spanId": "k3bQrQkdTc8=",
-              "parentSpanId": "dUQJisKh9wk=",
-              "name": "RunnableParallel<answer>",
-              "kind": "SPAN_KIND_INTERNAL",
-              "startTimeUnixNano": "1751474840707161856",
-              "endTimeUnixNano": "1751474842076199168",
-              "attributes": [
-                {
-                  "key": "app.name",
-                  "value": {
-                    "stringValue": "earnings-reports-rag"
-                  }
-                },
-                {
-                  "key": "app.environment",
-                  "value": {
-                    "stringValue": "development"
-                  }
-                },
-                {
-                  "key": "input.value",
-                  "value": {
-                    "stringValue": "{\"input\": \"what was meta's revenue in Q4 2023\", \"context\": [\"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\"]}"
-                  }
-                },
-                {
-                  "key": "input.mime_type",
-                  "value": {
-                    "stringValue": "application/json"
-                  }
-                },
-                {
-                  "key": "output.value",
-                  "value": {
-                    "stringValue": "Meta Platforms Inc.'s revenue in Q4 2023 was $40.1 billion."
-                  }
-                },
-                {
-                  "key": "openinference.span.kind",
-                  "value": {
-                    "stringValue": "CHAIN"
-                  }
-                }
-              ],
-              "status": {
-                "code": "STATUS_CODE_OK"
-              },
-              "flags": 256
-            },
-            {
-              "traceId": "tH12H+eb6IruQTQs3VJyaA==",
-              "spanId": "dUQJisKh9wk=",
-              "parentSpanId": "7Xjk53+Xypc=",
-              "name": "RunnableAssign<answer>",
-              "kind": "SPAN_KIND_INTERNAL",
-              "startTimeUnixNano": "1751474840706675968",
-              "endTimeUnixNano": "1751474842076369152",
-              "attributes": [
-                {
-                  "key": "app.name",
-                  "value": {
-                    "stringValue": "earnings-reports-rag"
-                  }
-                },
-                {
-                  "key": "app.environment",
-                  "value": {
-                    "stringValue": "development"
-                  }
-                },
-                {
-                  "key": "input.value",
-                  "value": {
-                    "stringValue": "{\"input\": \"what was meta's revenue in Q4 2023\", \"context\": [\"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\"]}"
-                  }
-                },
-                {
-                  "key": "input.mime_type",
-                  "value": {
-                    "stringValue": "application/json"
-                  }
-                },
-                {
-                  "key": "output.value",
-                  "value": {
-                    "stringValue": "{\"input\": \"what was meta's revenue in Q4 2023\", \"context\": [\"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\"], \"answer\": \"Meta Platforms Inc.'s revenue in Q4 2023 was $40.1 billion.\"}"
-                  }
-                },
-                {
-                  "key": "output.mime_type",
-                  "value": {
-                    "stringValue": "application/json"
-                  }
-                },
-                {
-                  "key": "openinference.span.kind",
-                  "value": {
-                    "stringValue": "CHAIN"
-                  }
-                }
-              ],
-              "status": {
-                "code": "STATUS_CODE_OK"
-              },
-              "flags": 256
-            },
-            {
-              "traceId": "tH12H+eb6IruQTQs3VJyaA==",
-              "spanId": "7Xjk53+Xypc=",
-              "parentSpanId": "yP3finWLFco=",
-              "name": "retrieval_chain",
-              "kind": "SPAN_KIND_INTERNAL",
-              "startTimeUnixNano": "1751474840290605056",
-              "endTimeUnixNano": "1751474842076484864",
-              "attributes": [
-                {
-                  "key": "app.name",
-                  "value": {
-                    "stringValue": "earnings-reports-rag"
-                  }
-                },
-                {
-                  "key": "app.environment",
-                  "value": {
-                    "stringValue": "development"
-                  }
-                },
-                {
-                  "key": "input.value",
-                  "value": {
-                    "stringValue": "what was meta's revenue in Q4 2023"
-                  }
-                },
-                {
-                  "key": "output.value",
-                  "value": {
-                    "stringValue": "{\"input\": \"what was meta's revenue in Q4 2023\", \"context\": [\"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\"], \"answer\": \"Meta Platforms Inc.'s revenue in Q4 2023 was $40.1 billion.\"}"
-                  }
-                },
-                {
-                  "key": "output.mime_type",
-                  "value": {
-                    "stringValue": "application/json"
-                  }
-                },
-                {
-                  "key": "openinference.span.kind",
-                  "value": {
-                    "stringValue": "CHAIN"
-                  }
-                }
-              ],
-              "status": {
-                "code": "STATUS_CODE_OK"
-              },
-              "flags": 256
+              "key": "service.name",
+              "value": {
+                "stringValue": "unknown_service"
+              }
             }
           ]
-        }
-      ]
-    }
-  ]
-},
-{
-  "resourceSpans": [
-    {
-      "resource": {
-        "attributes": [
+        },
+        "scopeSpans": [
           {
-            "key": "telemetry.sdk.language",
-            "value": {
-              "stringValue": "python"
-            }
-          },
-          {
-            "key": "telemetry.sdk.name",
-            "value": {
-              "stringValue": "opentelemetry"
-            }
-          },
-          {
-            "key": "telemetry.sdk.version",
-            "value": {
-              "stringValue": "1.27.0"
-            }
-          },
-          {
-            "key": "service.name",
-            "value": {
-              "stringValue": "unknown_service"
-            }
+            "scope": {
+              "name": "openinference.instrumentation.langchain",
+              "version": "0.1.43"
+            },
+            "spans": [
+              {
+                "traceId": "tH12H+eb6IruQTQs3VJyaA==",
+                "spanId": "GcmtOA5tpAU=",
+                "parentSpanId": "SlraH+XLGbw=",
+                "name": "ChatOpenAI",
+                "kind": "SPAN_KIND_INTERNAL",
+                "startTimeUnixNano": "1751474840799428096",
+                "endTimeUnixNano": "1751474842073609984",
+                "attributes": [
+                  {
+                    "key": "app.name",
+                    "value": {
+                      "stringValue": "earnings-reports-rag"
+                    }
+                  },
+                  {
+                    "key": "app.environment",
+                    "value": {
+                      "stringValue": "development"
+                    }
+                  },
+                  {
+                    "key": "input.value",
+                    "value": {
+                      "stringValue": "{\"messages\": [[{\"lc\": 1, \"type\": \"constructor\", \"id\": [\"langchain\", \"schema\", \"messages\", \"HumanMessage\"], \"kwargs\": {\"content\": \"\\n    Answer the following question based on the provided context:\\n\\n    Context: Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion\\n\\nMeta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion\\n\\nMeta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion\\n\\n    Question: what was meta's revenue in Q4 2023\\n\\n    Answer:\\n    \", \"type\": \"human\"}}]]}"
+                    }
+                  },
+                  {
+                    "key": "input.mime_type",
+                    "value": {
+                      "stringValue": "application/json"
+                    }
+                  },
+                  {
+                    "key": "output.value",
+                    "value": {
+                      "stringValue": "{\"generations\": [[{\"generation_info\": {\"finish_reason\": \"stop\", \"logprobs\": null}, \"type\": \"ChatGeneration\", \"message\": {\"lc\": 1, \"type\": \"constructor\", \"id\": [\"langchain\", \"schema\", \"messages\", \"AIMessage\"], \"kwargs\": {\"content\": \"Meta Platforms Inc.'s revenue in Q4 2023 was $40.1 billion.\", \"additional_kwargs\": {\"refusal\": null}, \"response_metadata\": {\"token_usage\": {\"completion_tokens\": 19, \"prompt_tokens\": 629, \"total_tokens\": 648, \"completion_tokens_details\": {\"accepted_prediction_tokens\": 0, \"audio_tokens\": 0, \"reasoning_tokens\": 0, \"rejected_prediction_tokens\": 0}, \"prompt_tokens_details\": {\"audio_tokens\": 0, \"cached_tokens\": 0}}, \"model_name\": \"gpt-3.5-turbo-0125\", \"system_fingerprint\": null, \"id\": \"chatcmpl-Bouu9TLAdtJGh8fN177uNsTXYgPzN\", \"service_tier\": \"default\", \"finish_reason\": \"stop\", \"logprobs\": null}, \"type\": \"ai\", \"id\": \"run--2aa38272-edfb-4c43-aa00-666ae00e16a7-0\", \"usage_metadata\": {\"input_tokens\": 629, \"output_tokens\": 19, \"total_tokens\": 648, \"input_token_details\": {\"audio\": 0, \"cache_read\": 0}, \"output_token_details\": {\"audio\": 0, \"reasoning\": 0}}, \"tool_calls\": [], \"invalid_tool_calls\": []}}, \"text\": \"Meta Platforms Inc.'s revenue in Q4 2023 was $40.1 billion.\"}]], \"llm_output\": {\"token_usage\": {\"completion_tokens\": 19, \"prompt_tokens\": 629, \"total_tokens\": 648, \"completion_tokens_details\": {\"accepted_prediction_tokens\": 0, \"audio_tokens\": 0, \"reasoning_tokens\": 0, \"rejected_prediction_tokens\": 0}, \"prompt_tokens_details\": {\"audio_tokens\": 0, \"cached_tokens\": 0}}, \"model_name\": \"gpt-3.5-turbo-0125\", \"system_fingerprint\": null, \"id\": \"chatcmpl-Bouu9TLAdtJGh8fN177uNsTXYgPzN\", \"service_tier\": \"default\"}, \"run\": null, \"type\": \"LLMResult\"}"
+                    }
+                  },
+                  {
+                    "key": "output.mime_type",
+                    "value": {
+                      "stringValue": "application/json"
+                    }
+                  },
+                  {
+                    "key": "llm.input_messages.0.message.role",
+                    "value": {
+                      "stringValue": "user"
+                    }
+                  },
+                  {
+                    "key": "llm.input_messages.0.message.content",
+                    "value": {
+                      "stringValue": "\n    Answer the following question based on the provided context:\n\n    Context: Meta Platforms Inc. Q4 2023 Earnings Report\n\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\n\nKey Financial Highlights:\n- Revenue: $40.1 billion (25% YoY growth)\n- Net Income: $14.0 billion\n- Earnings Per Share: $5.33\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\n\nBusiness Segment Performance:\n- Family of Apps Revenue: $39.8 billion\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\n- Advertising Revenue: $38.7 billion\n\nMeta Platforms Inc. Q4 2023 Earnings Report\n\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\n\nKey Financial Highlights:\n- Revenue: $40.1 billion (25% YoY growth)\n- Net Income: $14.0 billion\n- Earnings Per Share: $5.33\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\n\nBusiness Segment Performance:\n- Family of Apps Revenue: $39.8 billion\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\n- Advertising Revenue: $38.7 billion\n\nMeta Platforms Inc. Q4 2023 Earnings Report\n\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\n\nKey Financial Highlights:\n- Revenue: $40.1 billion (25% YoY growth)\n- Net Income: $14.0 billion\n- Earnings Per Share: $5.33\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\n\nBusiness Segment Performance:\n- Family of Apps Revenue: $39.8 billion\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\n- Advertising Revenue: $38.7 billion\n\n    Question: what was meta's revenue in Q4 2023\n\n    Answer:\n    "
+                    }
+                  },
+                  {
+                    "key": "llm.output_messages.0.message.role",
+                    "value": {
+                      "stringValue": "assistant"
+                    }
+                  },
+                  {
+                    "key": "llm.output_messages.0.message.content",
+                    "value": {
+                      "stringValue": "Meta Platforms Inc.'s revenue in Q4 2023 was $40.1 billion."
+                    }
+                  },
+                  {
+                    "key": "llm.invocation_parameters",
+                    "value": {
+                      "stringValue": "{\"model\": \"gpt-3.5-turbo\", \"model_name\": \"gpt-3.5-turbo\", \"stream\": false, \"temperature\": 0.1, \"_type\": \"openai-chat\", \"stop\": null}"
+                    }
+                  },
+                  {
+                    "key": "llm.model_name",
+                    "value": {
+                      "stringValue": "gpt-3.5-turbo"
+                    }
+                  },
+                  {
+                    "key": "llm.token_count.prompt",
+                    "value": {
+                      "intValue": "629"
+                    }
+                  },
+                  {
+                    "key": "llm.token_count.completion",
+                    "value": {
+                      "intValue": "19"
+                    }
+                  },
+                  {
+                    "key": "llm.token_count.total",
+                    "value": {
+                      "intValue": "648"
+                    }
+                  },
+                  {
+                    "key": "llm.token_count.completion_details.audio",
+                    "value": {
+                      "intValue": "0"
+                    }
+                  },
+                  {
+                    "key": "llm.token_count.completion_details.reasoning",
+                    "value": {
+                      "intValue": "0"
+                    }
+                  },
+                  {
+                    "key": "llm.token_count.prompt_details.audio",
+                    "value": {
+                      "intValue": "0"
+                    }
+                  },
+                  {
+                    "key": "llm.token_count.prompt_details.cache_read",
+                    "value": {
+                      "intValue": "0"
+                    }
+                  },
+                  {
+                    "key": "metadata",
+                    "value": {
+                      "stringValue": "{\"ls_provider\": \"openai\", \"ls_model_name\": \"gpt-3.5-turbo\", \"ls_model_type\": \"chat\", \"ls_temperature\": 0.1}"
+                    }
+                  },
+                  {
+                    "key": "openinference.span.kind",
+                    "value": {
+                      "stringValue": "LLM"
+                    }
+                  }
+                ],
+                "status": {
+                  "code": "STATUS_CODE_OK"
+                },
+                "flags": 256
+              },
+              {
+                "traceId": "tH12H+eb6IruQTQs3VJyaA==",
+                "spanId": "5eCPQRSXnjI=",
+                "parentSpanId": "SlraH+XLGbw=",
+                "name": "StrOutputParser",
+                "kind": "SPAN_KIND_INTERNAL",
+                "startTimeUnixNano": "1751474842075184128",
+                "endTimeUnixNano": "1751474842075719168",
+                "attributes": [
+                  {
+                    "key": "app.name",
+                    "value": {
+                      "stringValue": "earnings-reports-rag"
+                    }
+                  },
+                  {
+                    "key": "app.environment",
+                    "value": {
+                      "stringValue": "development"
+                    }
+                  },
+                  {
+                    "key": "input.value",
+                    "value": {
+                      "stringValue": "{\"input\": \"content=\\\"Meta Platforms Inc.'s revenue in Q4 2023 was $40.1 billion.\\\" additional_kwargs={'refusal': None} response_metadata={'token_usage': {'completion_tokens': 19, 'prompt_tokens': 629, 'total_tokens': 648, 'completion_tokens_details': {'accepted_prediction_tokens': 0, 'audio_tokens': 0, 'reasoning_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}, 'model_name': 'gpt-3.5-turbo-0125', 'system_fingerprint': None, 'id': 'chatcmpl-Bouu9TLAdtJGh8fN177uNsTXYgPzN', 'service_tier': 'default', 'finish_reason': 'stop', 'logprobs': None} id='run--2aa38272-edfb-4c43-aa00-666ae00e16a7-0' usage_metadata={'input_tokens': 629, 'output_tokens': 19, 'total_tokens': 648, 'input_token_details': {'audio': 0, 'cache_read': 0}, 'output_token_details': {'audio': 0, 'reasoning': 0}}\"}"
+                    }
+                  },
+                  {
+                    "key": "input.mime_type",
+                    "value": {
+                      "stringValue": "application/json"
+                    }
+                  },
+                  {
+                    "key": "output.value",
+                    "value": {
+                      "stringValue": "Meta Platforms Inc.'s revenue in Q4 2023 was $40.1 billion."
+                    }
+                  },
+                  {
+                    "key": "openinference.span.kind",
+                    "value": {
+                      "stringValue": "UNKNOWN"
+                    }
+                  }
+                ],
+                "status": {
+                  "code": "STATUS_CODE_OK"
+                },
+                "flags": 256
+              },
+              {
+                "traceId": "tH12H+eb6IruQTQs3VJyaA==",
+                "spanId": "SlraH+XLGbw=",
+                "parentSpanId": "k3bQrQkdTc8=",
+                "name": "stuff_documents_chain",
+                "kind": "SPAN_KIND_INTERNAL",
+                "startTimeUnixNano": "1751474840707863040",
+                "endTimeUnixNano": "1751474842075954944",
+                "attributes": [
+                  {
+                    "key": "app.name",
+                    "value": {
+                      "stringValue": "earnings-reports-rag"
+                    }
+                  },
+                  {
+                    "key": "app.environment",
+                    "value": {
+                      "stringValue": "development"
+                    }
+                  },
+                  {
+                    "key": "input.value",
+                    "value": {
+                      "stringValue": "{\"input\": \"what was meta's revenue in Q4 2023\", \"context\": [\"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\"]}"
+                    }
+                  },
+                  {
+                    "key": "input.mime_type",
+                    "value": {
+                      "stringValue": "application/json"
+                    }
+                  },
+                  {
+                    "key": "output.value",
+                    "value": {
+                      "stringValue": "Meta Platforms Inc.'s revenue in Q4 2023 was $40.1 billion."
+                    }
+                  },
+                  {
+                    "key": "openinference.span.kind",
+                    "value": {
+                      "stringValue": "CHAIN"
+                    }
+                  }
+                ],
+                "status": {
+                  "code": "STATUS_CODE_OK"
+                },
+                "flags": 256
+              },
+              {
+                "traceId": "tH12H+eb6IruQTQs3VJyaA==",
+                "spanId": "k3bQrQkdTc8=",
+                "parentSpanId": "dUQJisKh9wk=",
+                "name": "RunnableParallel<answer>",
+                "kind": "SPAN_KIND_INTERNAL",
+                "startTimeUnixNano": "1751474840707161856",
+                "endTimeUnixNano": "1751474842076199168",
+                "attributes": [
+                  {
+                    "key": "app.name",
+                    "value": {
+                      "stringValue": "earnings-reports-rag"
+                    }
+                  },
+                  {
+                    "key": "app.environment",
+                    "value": {
+                      "stringValue": "development"
+                    }
+                  },
+                  {
+                    "key": "input.value",
+                    "value": {
+                      "stringValue": "{\"input\": \"what was meta's revenue in Q4 2023\", \"context\": [\"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\"]}"
+                    }
+                  },
+                  {
+                    "key": "input.mime_type",
+                    "value": {
+                      "stringValue": "application/json"
+                    }
+                  },
+                  {
+                    "key": "output.value",
+                    "value": {
+                      "stringValue": "Meta Platforms Inc.'s revenue in Q4 2023 was $40.1 billion."
+                    }
+                  },
+                  {
+                    "key": "openinference.span.kind",
+                    "value": {
+                      "stringValue": "CHAIN"
+                    }
+                  }
+                ],
+                "status": {
+                  "code": "STATUS_CODE_OK"
+                },
+                "flags": 256
+              },
+              {
+                "traceId": "tH12H+eb6IruQTQs3VJyaA==",
+                "spanId": "dUQJisKh9wk=",
+                "parentSpanId": "7Xjk53+Xypc=",
+                "name": "RunnableAssign<answer>",
+                "kind": "SPAN_KIND_INTERNAL",
+                "startTimeUnixNano": "1751474840706675968",
+                "endTimeUnixNano": "1751474842076369152",
+                "attributes": [
+                  {
+                    "key": "app.name",
+                    "value": {
+                      "stringValue": "earnings-reports-rag"
+                    }
+                  },
+                  {
+                    "key": "app.environment",
+                    "value": {
+                      "stringValue": "development"
+                    }
+                  },
+                  {
+                    "key": "input.value",
+                    "value": {
+                      "stringValue": "{\"input\": \"what was meta's revenue in Q4 2023\", \"context\": [\"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\"]}"
+                    }
+                  },
+                  {
+                    "key": "input.mime_type",
+                    "value": {
+                      "stringValue": "application/json"
+                    }
+                  },
+                  {
+                    "key": "output.value",
+                    "value": {
+                      "stringValue": "{\"input\": \"what was meta's revenue in Q4 2023\", \"context\": [\"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\"], \"answer\": \"Meta Platforms Inc.'s revenue in Q4 2023 was $40.1 billion.\"}"
+                    }
+                  },
+                  {
+                    "key": "output.mime_type",
+                    "value": {
+                      "stringValue": "application/json"
+                    }
+                  },
+                  {
+                    "key": "openinference.span.kind",
+                    "value": {
+                      "stringValue": "CHAIN"
+                    }
+                  }
+                ],
+                "status": {
+                  "code": "STATUS_CODE_OK"
+                },
+                "flags": 256
+              },
+              {
+                "traceId": "tH12H+eb6IruQTQs3VJyaA==",
+                "spanId": "7Xjk53+Xypc=",
+                "parentSpanId": "yP3finWLFco=",
+                "name": "retrieval_chain",
+                "kind": "SPAN_KIND_INTERNAL",
+                "startTimeUnixNano": "1751474840290605056",
+                "endTimeUnixNano": "1751474842076484864",
+                "attributes": [
+                  {
+                    "key": "app.name",
+                    "value": {
+                      "stringValue": "earnings-reports-rag"
+                    }
+                  },
+                  {
+                    "key": "app.environment",
+                    "value": {
+                      "stringValue": "development"
+                    }
+                  },
+                  {
+                    "key": "input.value",
+                    "value": {
+                      "stringValue": "what was meta's revenue in Q4 2023"
+                    }
+                  },
+                  {
+                    "key": "output.value",
+                    "value": {
+                      "stringValue": "{\"input\": \"what was meta's revenue in Q4 2023\", \"context\": [\"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\", \"page_content='Meta Platforms Inc. Q4 2023 Earnings Report\\n\\nMeta Platforms Inc. (NASDAQ: META) reported strong fourth quarter 2023 results, with revenue of $40.1 billion, representing a 25% increase year-over-year. The company's Family of Apps segment, which includes Facebook, Instagram, WhatsApp, and Messenger, generated $39.8 billion in revenue.\\n\\nKey Financial Highlights:\\n- Revenue: $40.1 billion (25% YoY growth)\\n- Net Income: $14.0 billion\\n- Earnings Per Share: $5.33\\n- Daily Active Users (DAUs): 2.11 billion across Family of Apps\\n- Monthly Active Users (MAUs): 3.07 billion across Family of Apps\\n\\nBusiness Segment Performance:\\n- Family of Apps Revenue: $39.8 billion\\n- Reality Labs Revenue: $1.1 billion (VR/AR segment)\\n- Advertising Revenue: $38.7 billion' metadata={'source': 'data/meta_q4_2023.txt'}\"], \"answer\": \"Meta Platforms Inc.'s revenue in Q4 2023 was $40.1 billion.\"}"
+                    }
+                  },
+                  {
+                    "key": "output.mime_type",
+                    "value": {
+                      "stringValue": "application/json"
+                    }
+                  },
+                  {
+                    "key": "openinference.span.kind",
+                    "value": {
+                      "stringValue": "CHAIN"
+                    }
+                  }
+                ],
+                "status": {
+                  "code": "STATUS_CODE_OK"
+                },
+                "flags": 256
+              }
+            ]
           }
         ]
-      },
-      "scopeSpans": [
-        {
-          "scope": {
-            "name": "quotient.sdk.python"
-          },
-          "spans": [
+      }
+    ]
+  },
+  {
+    "resourceSpans": [
+      {
+        "resource": {
+          "attributes": [
             {
-              "traceId": "tH12H+eb6IruQTQs3VJyaA==",
-              "spanId": "IkweT4IEqvQ=",
-              "parentSpanId": "yP3finWLFco=",
-              "name": "quotient.end_of_trace",
-              "kind": "SPAN_KIND_INTERNAL",
-              "startTimeUnixNano": "1751474867486249000",
-              "endTimeUnixNano": "1751474867486312000",
-              "attributes": [
-                {
-                  "key": "app.name",
-                  "value": {
-                    "stringValue": "earnings-reports-rag"
-                  }
-                },
-                {
-                  "key": "app.environment",
-                  "value": {
-                    "stringValue": "development"
-                  }
-                },
-                {
-                  "key": "quotient.trace.complete",
-                  "value": {
-                    "boolValue": true
-                  }
-                },
-                {
-                  "key": "quotient.trace.marker",
-                  "value": {
-                    "boolValue": true
-                  }
-                },
-                {
-                  "key": "quotient.trace.id",
-                  "value": {
-                    "stringValue": "b47d761fe79be88aee41342cdd527268"
-                  }
-                },
-                {
-                  "key": "quotient.marker.timestamp",
-                  "value": {
-                    "intValue": "1751474867486303000"
-                  }
-                }
-              ],
-              "status": {},
-              "flags": 256
+              "key": "telemetry.sdk.language",
+              "value": {
+                "stringValue": "python"
+              }
             },
             {
-              "traceId": "tH12H+eb6IruQTQs3VJyaA==",
-              "spanId": "yP3finWLFco=",
-              "name": "main",
-              "kind": "SPAN_KIND_INTERNAL",
-              "startTimeUnixNano": "1751474816897561000",
-              "endTimeUnixNano": "1751474867486336000",
-              "attributes": [
-                {
-                  "key": "app.name",
-                  "value": {
-                    "stringValue": "earnings-reports-rag"
-                  }
-                },
-                {
-                  "key": "app.environment",
-                  "value": {
-                    "stringValue": "development"
-                  }
-                }
-              ],
-              "status": {},
-              "flags": 256
+              "key": "telemetry.sdk.name",
+              "value": {
+                "stringValue": "opentelemetry"
+              }
+            },
+            {
+              "key": "telemetry.sdk.version",
+              "value": {
+                "stringValue": "1.27.0"
+              }
+            },
+            {
+              "key": "service.name",
+              "value": {
+                "stringValue": "unknown_service"
+              }
             }
           ]
-        }
-      ]
-    }
-  ]
-}]
+        },
+        "scopeSpans": [
+          {
+            "scope": {
+              "name": "quotient.sdk.python"
+            },
+            "spans": [
+              {
+                "traceId": "tH12H+eb6IruQTQs3VJyaA==",
+                "spanId": "IkweT4IEqvQ=",
+                "parentSpanId": "yP3finWLFco=",
+                "name": "quotient.end_of_trace",
+                "kind": "SPAN_KIND_INTERNAL",
+                "startTimeUnixNano": "1751474867486249000",
+                "endTimeUnixNano": "1751474867486312000",
+                "attributes": [
+                  {
+                    "key": "app.name",
+                    "value": {
+                      "stringValue": "earnings-reports-rag"
+                    }
+                  },
+                  {
+                    "key": "app.environment",
+                    "value": {
+                      "stringValue": "development"
+                    }
+                  },
+                  {
+                    "key": "quotient.trace.complete",
+                    "value": {
+                      "boolValue": true
+                    }
+                  },
+                  {
+                    "key": "quotient.trace.marker",
+                    "value": {
+                      "boolValue": true
+                    }
+                  },
+                  {
+                    "key": "quotient.trace.id",
+                    "value": {
+                      "stringValue": "b47d761fe79be88aee41342cdd527268"
+                    }
+                  },
+                  {
+                    "key": "quotient.marker.timestamp",
+                    "value": {
+                      "intValue": "1751474867486303000"
+                    }
+                  }
+                ],
+                "status": {},
+                "flags": 256
+              },
+              {
+                "traceId": "tH12H+eb6IruQTQs3VJyaA==",
+                "spanId": "yP3finWLFco=",
+                "name": "main",
+                "kind": "SPAN_KIND_INTERNAL",
+                "startTimeUnixNano": "1751474816897561000",
+                "endTimeUnixNano": "1751474867486336000",
+                "attributes": [
+                  {
+                    "key": "app.name",
+                    "value": {
+                      "stringValue": "earnings-reports-rag"
+                    }
+                  },
+                  {
+                    "key": "app.environment",
+                    "value": {
+                      "stringValue": "development"
+                    }
+                  }
+                ],
+                "status": {},
+                "flags": 256
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
