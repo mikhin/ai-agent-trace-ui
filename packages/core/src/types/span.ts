@@ -1,3 +1,5 @@
+export type SpanStatus = "success" | "error" | "pending" | "warning";
+
 export type SpanCardType = {
   id: string;
   title: string;
@@ -8,7 +10,7 @@ export type SpanCardType = {
   type: SpanCategory;
   children?: SpanCardType[];
   tokensCount: number;
-  status: "success" | "error" | "running" | "warning";
+  status: SpanStatus;
 };
 
 export type SpanCategory =
