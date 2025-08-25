@@ -1,8 +1,8 @@
-import type { SpanStatus } from "../types/span";
+import type { TraceSpanStatus } from "../types";
 
 import { type StatusCode } from "../types/open-telemetry";
 
-export const mapSpanStatus = (statusCode?: StatusCode): SpanStatus => {
+export const mapSpanStatus = (statusCode?: StatusCode): TraceSpanStatus => {
   switch (statusCode) {
     case "STATUS_CODE_OK":
       return "success";

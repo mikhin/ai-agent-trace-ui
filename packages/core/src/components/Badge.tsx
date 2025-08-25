@@ -1,6 +1,6 @@
 import type { ReactElement, ReactNode } from "react";
 
-import type { ColorVariant } from "../types/ui.ts";
+import type { ColorVariant } from "../types";
 
 import { colorThemeClasses } from "../constants/ui.ts";
 

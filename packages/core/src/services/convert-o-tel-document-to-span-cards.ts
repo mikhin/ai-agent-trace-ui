@@ -1,11 +1,11 @@
+import type { TraceSpan } from "../types";
 import type { OpenTelemetryDocument, Span } from "../types/open-telemetry";
-import type { SpanCardType } from "../types/span";
 
 import { convertOTelTraceToSpanTree } from "./convert-o-tel-trace-to-span-tree";
 
 export const convertOTelDocumentToSpanCards = (
   documents: OpenTelemetryDocument | OpenTelemetryDocument[],
-): SpanCardType[] => {
+): TraceSpan[] => {
   // Handle both single document and array of documents
   const docArray = Array.isArray(documents) ? documents : [documents];
 

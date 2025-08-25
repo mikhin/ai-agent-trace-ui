@@ -1,6 +1,6 @@
 import type { FC, PropsWithChildren, ReactElement } from "react";
 
-import type { ColorVariant } from "../types/ui";
+import type { ColorVariant } from "../types";
 
 import { roundedClasses } from "../constants/ui";
 
@@ -33,17 +33,71 @@ const variantClasses = {
 };
 
 export type ButtonProps = {
+  /**
+   * The content of the button
+   */
   children: React.ReactNode;
+
+  /**
+   * The size of the button
+   * @default "xs"
+   */
   size?: "xs";
+
+  /**
+   * The color theme of the button
+   * @default "gray"
+   */
   theme?: ColorVariant;
+
+  /**
+   * The border radius of the button
+   * @default "md"
+   */
   rounded?: "none" | "sm" | "md" | "lg" | "full";
+
+  /**
+   * The visual variant of the button
+   * @default "filled"
+   */
   variant?: "filled" | "outlined" | "ghost";
+
+  /**
+   * Makes the button full width
+   * @default false
+   */
   fullWidth?: boolean;
+
+  /**
+   * Disables the button
+   * @default false
+   */
   disabled?: boolean;
+
+  /**
+   * Optional icon to display at the start of the button
+   */
   iconStart?: ReactElement;
+
+  /**
+   * Optional icon to display at the end of the button
+   */
   iconEnd?: ReactElement;
+
+  /**
+   * The button type attribute
+   * @default "button"
+   */
   type?: "button" | "submit" | "reset";
+
+  /**
+   * Click handler function
+   */
   onClick?: () => void;
+
+  /**
+   * Optional className for additional styling
+   */
   className?: string;
 };
 

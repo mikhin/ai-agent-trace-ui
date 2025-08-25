@@ -1,5 +1,5 @@
+import type { TraceSpanCategory } from "../types";
 import type { Span } from "../types/open-telemetry.ts";
-import type { SpanCategory } from "../types/span.ts";
 
 import {
   OPENTELEMETRY_GENAI_ATTRIBUTES,
@@ -10,7 +10,7 @@ import { getAttributeValue } from "./get-attribute-value.ts";
 /**
  * Categorize span using OpenTelemetry GenAI semantic conventions
  */
-export function categorizeOpenTelemetryGenAI(span: Span): SpanCategory {
+export function categorizeOpenTelemetryGenAI(span: Span): TraceSpanCategory {
   const operationName = getAttributeValue(
     span,
     OPENTELEMETRY_GENAI_ATTRIBUTES.OPERATION_NAME,

@@ -1,4 +1,4 @@
-import type { SpanCardType } from "../types/span";
+import type { TraceSpan } from "../types";
 
 import { getDurationMs } from "./get-duration-ms.ts";
 
@@ -7,7 +7,7 @@ export const getTimelineData = ({
   minStart,
   maxEnd,
 }: {
-  spanCard: SpanCardType;
+  spanCard: TraceSpan;
   minStart: number;
   maxEnd: number;
 }) => {

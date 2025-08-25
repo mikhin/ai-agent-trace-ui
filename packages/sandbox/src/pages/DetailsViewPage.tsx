@@ -1,11 +1,11 @@
-import { DetailsView, type SpanCardType } from "ai-agent-trace-ui-core";
+import { DetailsView, type TraceSpan } from "ai-agent-trace-ui-core";
 import { type ReactElement } from "react";
 
 import { SandboxItem } from "../components/SandboxItem";
 import { SandboxSection } from "../components/SandboxSection";
 
 export const DetailsViewPage = (): ReactElement => {
-  const testData: SpanCardType = {
+  const testData: TraceSpan = {
     id: "test-span",
     title: "ChatCompletion",
     raw: JSON.stringify(
@@ -31,7 +31,7 @@ export const DetailsViewPage = (): ReactElement => {
       2,
     ),
     attributes: [
-      { key: "Input", value: { stringValue: "gpt-4" } },
+      { key: "TextInput", value: { stringValue: "gpt-4" } },
       { key: "prompt_tokens", value: { intValue: "1000" } },
       { key: "completion_tokens", value: { intValue: "500" } },
       { key: "total_tokens", value: { intValue: "1500" } },

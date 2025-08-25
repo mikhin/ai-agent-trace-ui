@@ -1,4 +1,4 @@
-import type { SpanCategory } from "../types/span";
+import type { TraceSpanCategory } from "../types";
 
 // OpenTelemetry GenAI attribute constants
 export const OPENTELEMETRY_GENAI_ATTRIBUTES = {
@@ -40,7 +40,7 @@ export const STANDARD_OPENTELEMETRY_ATTRIBUTES = {
 } as const;
 
 // OpenTelemetry GenAI operation name mappings
-export const OPENTELEMETRY_GENAI_MAPPINGS: Record<string, SpanCategory> = {
+export const OPENTELEMETRY_GENAI_MAPPINGS: Record<string, TraceSpanCategory> = {
   // LLM operations
   chat: "llm_call",
   generate_content: "llm_call",
@@ -58,7 +58,7 @@ export const OPENTELEMETRY_GENAI_MAPPINGS: Record<string, SpanCategory> = {
 } as const;
 
 // OpenInference span kind mappings
-export const OPENINFERENCE_MAPPINGS: Record<string, SpanCategory> = {
+export const OPENINFERENCE_MAPPINGS: Record<string, TraceSpanCategory> = {
   LLM: "llm_call",
   TOOL: "tool_execution",
   CHAIN: "chain_operation",

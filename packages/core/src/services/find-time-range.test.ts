@@ -1,12 +1,12 @@
 import { describe, expect, it } from "vitest";
 
-import type { SpanCardType } from "../types/span";
+import type { TraceSpan } from "../types";
 
 import { findTimeRange } from "./find-time-range";
 
 describe("findTimeRange", () => {
   it("should return minStart and maxEnd for a single card", () => {
-    const cards: SpanCardType[] = [
+    const cards: TraceSpan[] = [
       {
         id: "1",
         title: "Task 1",
@@ -54,7 +54,7 @@ describe("findTimeRange", () => {
   });
 
   it("should return minStart and maxEnd for multiple cards", () => {
-    const cards: SpanCardType[] = [
+    const cards: TraceSpan[] = [
       {
         id: "1",
         raw: JSON.stringify({
@@ -174,7 +174,7 @@ describe("findTimeRange", () => {
   });
 
   it("should return Infinity and -Infinity for an empty array", () => {
-    const cards: SpanCardType[] = [];
+    const cards: TraceSpan[] = [];
 
     const result = findTimeRange(cards);
 

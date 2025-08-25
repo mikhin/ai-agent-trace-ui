@@ -8,22 +8,59 @@ import {
   type RefObject,
 } from "react";
 
-export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+export interface TextInputProps extends InputHTMLAttributes<HTMLInputElement> {
+  /**
+   * Callback fired when the input value changes
+   */
   onValueChange?: (value: string) => void;
+
+  /**
+   * Icon to display at the start of the input
+   */
   startIcon?: ReactNode;
+
+  /**
+   * Callback fired when the clear button is clicked
+   */
   onClear?: () => void;
+
+  /**
+   * Whether to show a clear button when input has value
+   * @default false
+   */
   clearable?: boolean;
+
+  /**
+   * Ref to the input element
+   */
   ref?: RefObject<HTMLInputElement | null>;
+
+  /**
+   * Optional className for the input element
+   */
   inputClassName?: string;
+
+  /**
+   * Unique identifier for the input (required)
+   */
   id: string;
+
+  /**
+   * Label text for the input
+   */
   label?: string;
+
+  /**
+   * Whether to visually hide the label while keeping it for screen readers
+   * @default false
+   */
   hideLabel?: boolean;
 }
 
 const iconBaseClassName =
   "absolute top-1/2 -translate-y-1/2 flex items-center justify-center text-gray-700 dark:text-gray-500";
 
-export const Input = ({
+export const TextInput = ({
   className,
   onChange,
   onValueChange,
@@ -36,7 +73,7 @@ export const Input = ({
   hideLabel = false,
   id,
   ...props
-}: InputProps) => {
+}: TextInputProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {

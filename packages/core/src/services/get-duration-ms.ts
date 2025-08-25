@@ -1,6 +1,6 @@
-import type { SpanCardType } from "../types/span.ts";
+import type { TraceSpan } from "../types";
 
-export const getDurationMs = (spanCard: SpanCardType): number => {
+export const getDurationMs = (spanCard: TraceSpan): number => {
   const startMs = +spanCard.startTime;
   const endMs = +spanCard.endTime;
   return endMs - startMs;

@@ -1,6 +1,6 @@
-import type { SpanCardType } from "../types/span";
+import type { TraceSpan } from "../types";
 
-export function findTimeRange(cards: SpanCardType[]): {
+export function findTimeRange(cards: TraceSpan[]): {
   minStart: number;
   maxEnd: number;
 } {

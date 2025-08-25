@@ -1,13 +1,13 @@
 import { describe, it, expect } from "vitest";
 
-import type { SpanCardType } from "../types/span";
+import type { TraceSpan } from "../types";
 
 import { getTimelineData } from "./get-timeline-data";
 
 describe("getTimelineData", () => {
   describe("basic functionality", () => {
     it("should calculate timeline data for a span card within a time range", () => {
-      const spanCard: SpanCardType = {
+      const spanCard: TraceSpan = {
         id: "1",
         title: "LLM Call",
         raw: JSON.stringify({
@@ -40,7 +40,7 @@ describe("getTimelineData", () => {
     });
 
     it("should handle span cards that start after the minimum time", () => {
-      const spanCard: SpanCardType = {
+      const spanCard: TraceSpan = {
         id: "2",
         title: "Tool Execution",
         raw: JSON.stringify({
@@ -73,7 +73,7 @@ describe("getTimelineData", () => {
     });
 
     it("should handle span cards that end before the maximum time", () => {
-      const spanCard: SpanCardType = {
+      const spanCard: TraceSpan = {
         id: "3",
         title: "Agent Invocation",
         raw: JSON.stringify({
@@ -108,7 +108,7 @@ describe("getTimelineData", () => {
 
   describe("edge cases", () => {
     it("should handle very short duration spans", () => {
-      const spanCard: SpanCardType = {
+      const spanCard: TraceSpan = {
         id: "4",
         raw: JSON.stringify({
           id: "1",
@@ -145,7 +145,7 @@ describe("getTimelineData", () => {
     });
 
     it("should handle very long duration spans", () => {
-      const spanCard: SpanCardType = {
+      const spanCard: TraceSpan = {
         id: "5",
         title: "Long Running Task",
         startTime: new Date("2023-10-01T10:00:00.000Z"),
@@ -178,7 +178,7 @@ describe("getTimelineData", () => {
     });
 
     it("should handle spans that span the entire time range", () => {
-      const spanCard: SpanCardType = {
+      const spanCard: TraceSpan = {
         id: "6",
         title: "Full Range Span",
         startTime: new Date("2023-10-01T10:00:00.000Z"),
@@ -214,7 +214,7 @@ describe("getTimelineData", () => {
     });
 
     it("should handle spans that are exactly at the boundaries", () => {
-      const spanCard: SpanCardType = {
+      const spanCard: TraceSpan = {
         id: "7",
         title: "Boundary Span",
         startTime: new Date("2023-10-01T10:00:00.000Z"),
@@ -250,7 +250,7 @@ describe("getTimelineData", () => {
       const maxEnd = +new Date("2023-10-01T10:01:00.000Z");
 
       // Test at 25% of the timeline
-      const spanCard1: SpanCardType = {
+      const spanCard1: TraceSpan = {
         id: "8",
         raw: JSON.stringify({
           id: "1",
@@ -284,7 +284,7 @@ describe("getTimelineData", () => {
       expect(result1.startPercent).toBe(25);
 
       // Test at 75% of the timeline
-      const spanCard2: SpanCardType = {
+      const spanCard2: TraceSpan = {
         id: "9",
         raw: JSON.stringify({
           id: "1",
@@ -323,7 +323,7 @@ describe("getTimelineData", () => {
       const maxEnd = +new Date("2023-10-01T10:01:00.000Z");
 
       // Test 10% width
-      const spanCard1: SpanCardType = {
+      const spanCard1: TraceSpan = {
         id: "10",
         raw: JSON.stringify({
           id: "1",
@@ -357,7 +357,7 @@ describe("getTimelineData", () => {
       expect(result1.widthPercent).toBe(10);
 
       // Test 20% width
-      const spanCard2: SpanCardType = {
+      const spanCard2: TraceSpan = {
         id: "11",
         title: "20% Width",
         startTime: new Date("2023-10-01T10:00:00.000Z"),
@@ -394,7 +394,7 @@ describe("getTimelineData", () => {
 
   describe("time range variations", () => {
     it("should handle different time range scales", () => {
-      const spanCard: SpanCardType = {
+      const spanCard: TraceSpan = {
         id: "15",
         title: "Micro Operation",
         raw: JSON.stringify({
@@ -442,7 +442,7 @@ describe("getTimelineData", () => {
     });
 
     it("should handle very large time ranges", () => {
-      const spanCard: SpanCardType = {
+      const spanCard: TraceSpan = {
         id: "16",
         raw: JSON.stringify({
           id: "1",
@@ -478,7 +478,7 @@ describe("getTimelineData", () => {
 
   describe("precision and floating point handling", () => {
     it("should handle precise timing calculations", () => {
-      const spanCard: SpanCardType = {
+      const spanCard: TraceSpan = {
         id: "17",
         title: "Precise Operation",
         startTime: new Date("2023-10-01T10:00:00.000Z"),
@@ -515,7 +515,7 @@ describe("getTimelineData", () => {
     });
 
     it("should handle edge case where span duration equals total range", () => {
-      const spanCard: SpanCardType = {
+      const spanCard: TraceSpan = {
         id: "18",
         title: "Full Range Span",
         startTime: new Date("2023-10-01T10:00:00.000Z"),

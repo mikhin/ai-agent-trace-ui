@@ -2,24 +2,54 @@ import type { ReactElement } from "react";
 
 import { SquareTerminal, Tags } from "lucide-react";
 
-import type { SpanCardType } from "../types/span";
-import type { AvatarProps } from "./Avatar";
+import type { TraceSpan } from "../../types";
+import type { AvatarProps } from "../Avatar";
 
-import { DetailsViewAttributesTab } from "./DetailsViewAttributesTab.tsx";
-import { DetailsViewHeader } from "./DetailsViewHeader.tsx";
-import { DetailsViewMetrics } from "./DetailsViewMetrics.tsx";
-import { DetailsViewRawDataTab } from "./DetailsViewRawDataTab.tsx";
-import { Tabs } from "./Tabs.tsx";
+import { Tabs } from "../Tabs";
+import { DetailsViewAttributesTab } from "./DetailsViewAttributesTab";
+import { DetailsViewHeader } from "./DetailsViewHeader";
+import { DetailsViewMetrics } from "./DetailsViewMetrics";
+import { DetailsViewRawDataTab } from "./DetailsViewRawDataTab";
 
 interface DetailsViewProps {
-  data: SpanCardType;
+  /**
+   * The span data to display in the details view
+   */
+  data: TraceSpan;
+
+  /**
+   * Optional avatar configuration for the header
+   */
   avatar?: AvatarProps;
+
+  /**
+   * The initially selected tab
+   */
   defaultTab?: string;
+
+  /**
+   * Optional className for the root container
+   */
   className?: string;
+
+  /**
+   * Configuration for the copy button functionality
+   */
   copyButton?: {
+    /**
+     * Whether the copy button is enabled
+     * @default false
+     */
     isEnabled?: boolean;
-    onCopy?: (data: SpanCardType) => void;
+    /**
+     * Callback fired when copy button is clicked
+     */
+    onCopy?: (data: TraceSpan) => void;
   };
+
+  /**
+   * Callback fired when the active tab changes
+   */
   onTabChange?: (tabValue: string) => void;
 }
 

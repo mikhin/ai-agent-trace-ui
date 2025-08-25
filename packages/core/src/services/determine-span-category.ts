@@ -1,5 +1,5 @@
+import type { TraceSpanCategory } from "../types";
 import type { Span } from "../types/open-telemetry.ts";
-import type { SpanCategory } from "../types/span.ts";
 
 import { categorizeOpenInference } from "../services/categorize-open-inference.ts";
 import { categorizeOpenTelemetryGenAI } from "../services/categorize-open-telemetry-gen-ai.ts";
@@ -10,7 +10,7 @@ import { categorizeStandardOpenTelemetry } from "./categorize-standard-open-tele
  * Main function to determine span category across all standards
  * Priority: OpenTelemetry GenAI > OpenInference > Standard OpenTelemetry
  */
-export function determineSpanCategory(span: Span): SpanCategory {
+export function determineSpanCategory(span: Span): TraceSpanCategory {
   const standard = detectStandard(span);
 
   switch (standard) {

@@ -1,12 +1,17 @@
 import cn from "classnames";
 import { useCallback, type KeyboardEvent } from "react";
 
-import type { Trace } from "./TraceList";
+import type { TraceRecord } from "../types";
 
 import { formatDuration } from "../services/calculate-duration";
-import { Avatar } from "./Avatar";
-import { Badge } from "./Badge";
-import { TraceListItemBadge } from "./TraceListItemBadge";
+import { Avatar, type AvatarProps } from "./Avatar";
+import { Badge, type BadgeProps } from "./Badge";
+
+interface TraceListItemProps extends TraceRecord {
+  badges?: Array<BadgeProps>;
+  avatar?: AvatarProps;
+  onClick?: () => void;
+}
 
 export const TraceListItem = ({
   name,
@@ -16,7 +21,7 @@ export const TraceListItem = ({
   avatar,
   onClick,
   badges,
-}: Trace) => {
+}: TraceListItemProps) => {
   const handleKeyDown = useCallback(
     (e: KeyboardEvent): void => {
       if (e.key === "Enter" || e.key === " ") {
@@ -52,11 +57,13 @@ export const TraceListItem = ({
         </div>
 
         <div className="flex items-center gap-2">
-          <TraceListItemBadge>
+          <Badge size="sm" theme="gray" variant="outline">
             {spansCount === 1 ? "1 span" : `${spansCount} spans`}
-          </TraceListItemBadge>
+          </Badge>
 
-          <TraceListItemBadge>{formatDuration(durationMs)}</TraceListItemBadge>
+          <Badge size="sm" theme="gray" variant="outline">
+            {formatDuration(durationMs)}
+          </Badge>
         </div>
       </header>
 
@@ -65,9 +72,9 @@ export const TraceListItem = ({
           {agentDescription}
         </span>
 
-        {badges?.map((badge) => (
-          <Badge key={badge.label} theme={badge.theme} size="xs">
-            {badge.label}
+        {badges?.map((badge, index) => (
+          <Badge key={index} theme={badge.theme} size="xs">
+            {badge.children}
           </Badge>
         ))}
       </div>

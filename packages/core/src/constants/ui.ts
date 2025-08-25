@@ -10,8 +10,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
-import type { SpanCategory } from "../types/span.ts";
-import type { ColorVariant } from "../types/ui.ts";
+import type { ColorVariant, TraceSpanCategory } from "../types";
 
 export const roundedClasses = {
   none: "rounded-none",
@@ -99,7 +98,7 @@ export const colorThemeClasses: Record<
  * Shared configuration for span categories containing label, theme, and icon
  */
 export const spanCategoryConfig: Record<
-  SpanCategory,
+  TraceSpanCategory,
   {
     label: string;
     theme: ColorVariant;

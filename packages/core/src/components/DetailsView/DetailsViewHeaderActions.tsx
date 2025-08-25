@@ -1,7 +1,7 @@
 import { MessageSquare, Plus } from "lucide-react";
 
-import { Button } from "./Button.tsx";
-import { IconButton } from "./IconButton.tsx";
+import { Button } from "../Button";
+import { IconButton } from "../IconButton";
 
 export const DetailsViewHeaderActions = () => (
   <div className="flex items-center gap-2">

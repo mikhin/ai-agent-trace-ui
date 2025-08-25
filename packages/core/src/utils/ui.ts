@@ -1,7 +1,6 @@
 import type { LucideIcon } from "lucide-react";
 
-import type { SpanCategory } from "../types/span.ts";
-import type { ColorVariant } from "../types/ui.ts";
+import type { ColorVariant, TraceSpanCategory } from "../types";
 
 import { colorThemeClasses, spanCategoryConfig } from "../constants/ui.ts";
 
@@ -9,14 +8,16 @@ export function getBgColorClass(color: ColorVariant): string {
   return colorThemeClasses[color].bg;
 }
 
-export function getSpanCategoryTheme(category: SpanCategory): ColorVariant {
+export function getSpanCategoryTheme(
+  category: TraceSpanCategory,
+): ColorVariant {
   return spanCategoryConfig[category].theme;
 }
 
-export function getSpanCategoryLabel(category: SpanCategory): string {
+export function getSpanCategoryLabel(category: TraceSpanCategory): string {
   return spanCategoryConfig[category].label;
 }
 
-export function getSpanCategoryIcon(category: SpanCategory): LucideIcon {
+export function getSpanCategoryIcon(category: TraceSpanCategory): LucideIcon {
   return spanCategoryConfig[category].icon;
 }

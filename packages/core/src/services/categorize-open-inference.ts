@@ -1,5 +1,5 @@
+import type { TraceSpanCategory } from "../types";
 import type { Span } from "../types/open-telemetry.ts";
-import type { SpanCategory } from "../types/span.ts";
 
 import {
   OPENINFERENCE_ATTRIBUTES,
@@ -10,7 +10,7 @@ import { getAttributeValue } from "./get-attribute-value.ts";
 /**
  * Categorize span using OpenInference semantic conventions
  */
-export function categorizeOpenInference(span: Span): SpanCategory {
+export function categorizeOpenInference(span: Span): TraceSpanCategory {
   const spanKind = getAttributeValue(span, OPENINFERENCE_ATTRIBUTES.SPAN_KIND);
 
   if (typeof spanKind === "string") {

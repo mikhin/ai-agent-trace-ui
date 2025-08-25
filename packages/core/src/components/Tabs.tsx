@@ -26,15 +26,49 @@ const THEMES = {
 } as const;
 
 export interface TabsProps {
+  /**
+   * Array of tab items to display
+   */
   items: TabItem[];
+
+  /**
+   * The initially selected tab value (uncontrolled)
+   */
   defaultValue?: string;
+
+  /**
+   * The currently selected tab value (controlled)
+   */
   value?: string;
+
+  /**
+   * Callback fired when the selected tab changes
+   */
   onValueChange?: (value: string) => void;
-  orientation?: "horizontal" | "vertical";
+
+  /**
+   * Visual theme variant for the tabs
+   */
   theme?: TabTheme;
+
+  /**
+   * Optional className for the root container
+   */
   className?: string;
+
+  /**
+   * Optional className for the tabs list container
+   */
   tabsListClassName?: string;
+
+  /**
+   * Optional className for individual tab triggers
+   */
   triggerClassName?: string;
+
+  /**
+   * Optional className for the tab content area
+   */
   contentClassName?: string;
 }
 
@@ -43,7 +77,6 @@ export const Tabs: React.FC<TabsProps> = ({
   defaultValue,
   value,
   onValueChange,
-  orientation = "horizontal",
   theme = "underline",
   className = "",
   tabsListClassName = "",
@@ -61,11 +94,10 @@ export const Tabs: React.FC<TabsProps> = ({
       defaultValue={!value ? defaultTab : undefined}
       value={value}
       onValueChange={onValueChange}
-      orientation={orientation}
       {...props}
     >
       <RadixTabs.List
-        className={`${currentTheme.list} ${orientation === "vertical" ? "flex-col" : ""} ${tabsListClassName}`}
+        className={`${currentTheme.list} ${tabsListClassName}`}
         aria-label="Navigation tabs"
       >
         {items.map((item: TabItem) => (

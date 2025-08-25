@@ -1,6 +1,6 @@
 import type { ReactElement } from "react";
 
-import type { ColorVariant } from "../types/ui";
+import type { ColorVariant } from "../types";
 
 import { roundedClasses } from "../constants/ui";
 

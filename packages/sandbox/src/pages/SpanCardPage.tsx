@@ -1,4 +1,4 @@
-import { type SpanCardType, SpanCard } from "ai-agent-trace-ui-core";
+import { type TraceSpan, SpanCard } from "ai-agent-trace-ui-core";
 import { type ReactElement, useState } from "react";
 
 import { SandboxItem } from "../components/SandboxItem.tsx";
@@ -18,7 +18,7 @@ export const SpanCardPage = (): ReactElement => {
   const rootSpan = sampleTreeViewData[0];
   const childSpan = rootSpan.children?.[0] || rootSpan;
 
-  const noChildrenSpan: SpanCardType = {
+  const noChildrenSpan: TraceSpan = {
     raw: JSON.stringify({
       id: "no-children-span",
       title: "Span With No Children",

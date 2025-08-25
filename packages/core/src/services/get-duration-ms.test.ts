@@ -1,12 +1,12 @@
 import { describe, expect, it } from "vitest";
 
-import type { SpanCardType } from "../types/span.ts";
+import type { TraceSpan } from "../types";
 
 import { getDurationMs } from "./get-duration-ms";
 
 describe("getDurationMs", () => {
   it("should return the correct duration in milliseconds", () => {
-    const spanCard: SpanCardType = {
+    const spanCard: TraceSpan = {
       id: "1",
       title: "Test Span",
       startTime: new Date("2023-01-01T00:00:00.000Z"),
@@ -25,7 +25,7 @@ describe("getDurationMs", () => {
   });
 
   it("should return 0 when start and end times are equal", () => {
-    const spanCard: SpanCardType = {
+    const spanCard: TraceSpan = {
       id: "1",
       title: "Test Span",
       startTime: new Date("2023-01-01T00:00:00.000Z"),
@@ -44,7 +44,7 @@ describe("getDurationMs", () => {
   });
 
   it("should handle negative duration correctly", () => {
-    const spanCard: SpanCardType = {
+    const spanCard: TraceSpan = {
       id: "1",
       title: "Test Span",
       startTime: new Date("2023-01-01T00:05:00.000Z"),

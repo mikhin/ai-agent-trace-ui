@@ -1,11 +1,11 @@
+import type { TraceSpan } from "../types";
 import type { Span } from "../types/open-telemetry";
-import type { SpanCardType } from "../types/span";
 
 import { convertOTelSpanToSpanCard } from "./convert-o-tel-span-to-span-card.ts";
 
-export const convertOTelTraceToSpanTree = (spans: Span[]): SpanCardType[] => {
-  const spanMap = new Map<string, SpanCardType>();
-  const rootSpans: SpanCardType[] = [];
+export const convertOTelTraceToSpanTree = (spans: Span[]): TraceSpan[] => {
+  const spanMap = new Map<string, TraceSpan>();
+  const rootSpans: TraceSpan[] = [];
 
   // First pass: create all span objects
   spans.forEach((span) => {

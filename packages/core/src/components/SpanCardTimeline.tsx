@@ -1,10 +1,9 @@
-import type { SpanCardType } from "../types/span";
-import type { ColorVariant } from "../types/ui";
+import type { ColorVariant, TraceSpan } from "../types";
 
 import { getTimelineData } from "../services/get-timeline-data";
 
 interface SpanCardTimelineProps {
-  spanCard: SpanCardType;
+  spanCard: TraceSpan;
   theme: ColorVariant;
   minStart: number;
   maxEnd: number;

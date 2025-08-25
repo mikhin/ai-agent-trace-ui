@@ -1,6 +1,6 @@
-import type { SpanCardType } from "ai-agent-trace-ui-core";
+import type { TraceSpan } from "ai-agent-trace-ui-core";
 
-export const sampleTreeViewDataDeepNesting: SpanCardType[] = [
+export const sampleTreeViewDataDeepNesting: TraceSpan[] = [
   {
     id: "1",
     title: "main",

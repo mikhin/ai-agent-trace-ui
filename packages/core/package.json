@@ -9,14 +9,17 @@
     ".": {
       "import": "./src/index.ts",
       "types": "./src/index.ts"
-    }
+    },
+    "./styles.css": "./dist/styles.css"
   },
   "files": [
-    "src"
+    "src",
+    "dist/styles.css"
   ],
   "scripts": {
     "tsc": "tsc -p tsconfig.app.json --noEmit --skipLibCheck",
-    "test": "vitest"
+    "test": "vitest",
+    "dev": "tailwind -i ./src/index.css -o ./dist/styles.css --watch"
   },
   "dependencies": {
     "@radix-ui/react-collapsible": "^1.1.11",

@@ -1,7 +1,7 @@
 import cn from "classnames";
 import { useState, useCallback, type FC } from "react";
 
-import type { SpanCardType } from "../types/span";
+import type { TraceSpan } from "../types";
 
 import { findTimeRange } from "../services/find-time-range.ts";
 import { flattenSpans } from "../services/flatten-span-cards.ts";
@@ -13,7 +13,7 @@ import {
 import { SpanCardSearchInput } from "./SpanCardSearchInput.tsx";
 
 interface TreeViewProps {
-  spans: SpanCardType[];
+  spans: TraceSpan[];
   onSelectionChange?: (selectedId: string | undefined) => void;
   className?: string;
   initialSelectedId?: string;

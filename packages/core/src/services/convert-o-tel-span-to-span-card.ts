@@ -1,5 +1,5 @@
+import type { TraceSpan } from "../types";
 import type { Span } from "../types/open-telemetry";
-import type { SpanCardType } from "../types/span";
 
 import { determineSpanCategory } from "../services/determine-span-category.ts";
 import { calculateDuration } from "./calculate-duration";
@@ -11,8 +11,8 @@ import { mapSpanStatus } from "./map-span-status";
 
 export const convertOTelSpanToSpanCard = (
   span: Span,
-  children: SpanCardType[] = [],
-): SpanCardType => {
+  children: TraceSpan[] = [],
+): TraceSpan => {
   const duration = calculateDuration(span);
   const status = mapSpanStatus(span.status.code);
   const spanType = determineSpanCategory(span);

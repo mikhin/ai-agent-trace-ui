@@ -1,36 +1,16 @@
 import cn from "classnames";
 import { ArrowLeft } from "lucide-react";
-import { Fragment } from "react/jsx-runtime";
 
-import type { ColorVariant } from "../types/ui";
-import type { AvatarProps } from "./Avatar";
+import type { TraceRecord } from "../types";
 
 import { Badge } from "./Badge";
 import { IconButton } from "./IconButton";
 import { TraceListItem } from "./TraceListItem";
 
-export type TraceListBadge = {
-  label: string;
-  theme: ColorVariant;
-};
-
-export type Trace = {
-  id: string;
-  name: string;
-  spansCount: number;
-  durationMs: number;
-  agentDescription: string;
-  badges?: TraceListBadge[];
-  avatar?: AvatarProps;
-  onClick?: () => void;
-};
-
 type TraceListProps = {
-  traces: Trace[];
-
+  traces: TraceRecord[];
   expanded: boolean;
   onExpandStateChange: (expanded: boolean) => void;
-
   className?: string;
 };
 
@@ -61,7 +41,7 @@ export const TraceList = ({
           </h2>
 
           <Badge
-            size="md"
+            size="sm"
             theme="gray"
             aria-label={`Total number of traces: ${traces.length}`}
           >
@@ -84,17 +64,17 @@ export const TraceList = ({
       </header>
 
       {expanded && (
-        <div className="flex flex-col items-center rounded border border-gray-200 dark:border-gray-800">
+        <ul className="flex flex-col items-center rounded border border-gray-200 dark:border-gray-800">
           {traces.map((trace, idx) => (
-            <Fragment key={trace.id}>
+            <li className="w-full list-none" key={trace.id}>
               <TraceListItem {...trace} />
 
               {idx < traces.length - 1 && (
                 <div className="h-px w-[calc(100%_-_32px)] bg-gray-200 dark:bg-gray-900" />
               )}
-            </Fragment>
+            </li>
           ))}
-        </div>
+        </ul>
       )}
     </div>
   );

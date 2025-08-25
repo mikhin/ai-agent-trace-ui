@@ -1,12 +1,14 @@
+import type { TraceSpanCategory } from "../types";
 import type { Span } from "../types/open-telemetry.ts";
-import type { SpanCategory } from "../types/span.ts";
 
 import { detectStandardOpenTelemetry } from "./detect-standard-open-telemetry.ts";
 
 /**
  * Categorize span using standard OpenTelemetry attributes and heuristics
  */
-export const categorizeStandardOpenTelemetry = (span: Span): SpanCategory => {
+export const categorizeStandardOpenTelemetry = (
+  span: Span,
+): TraceSpanCategory => {
   const mappings = detectStandardOpenTelemetry;
 
   // Priority order for detection

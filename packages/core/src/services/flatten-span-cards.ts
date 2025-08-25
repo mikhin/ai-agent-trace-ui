@@ -1,14 +1,14 @@
-import type { SpanCardType } from "../types/span";
+import type { TraceSpan } from "../types";
 
 /**
- * Flattens a tree of SpanCardType objects into a single array
+ * Flattens a tree of TraceSpan objects into a single array
  * @param spans - Array of root spans that may contain children
  * @returns Flattened array of all spans
  */
-export const flattenSpans = (spans: SpanCardType[]): SpanCardType[] => {
-  const result: SpanCardType[] = [];
+export const flattenSpans = (spans: TraceSpan[]): TraceSpan[] => {
+  const result: TraceSpan[] = [];
 
-  const traverse = (items: SpanCardType[]) => {
+  const traverse = (items: TraceSpan[]) => {
     items.forEach((item) => {
       result.push(item);
       if (item.children?.length) {

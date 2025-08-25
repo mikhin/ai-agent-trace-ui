@@ -3,11 +3,35 @@ import { ChevronDown } from "lucide-react";
 import * as React from "react";
 
 export interface CollapsibleSectionProps {
+  /**
+   * The title text displayed in the trigger button
+   */
   title: string;
+
+  /**
+   * The content to display when the section is expanded
+   */
   children: React.ReactNode;
+
+  /**
+   * Whether the section starts in an open state
+   * @default false
+   */
   defaultOpen?: boolean;
+
+  /**
+   * Optional className for the root container
+   */
   className?: string;
+
+  /**
+   * Optional className for the trigger button
+   */
   triggerClassName?: string;
+
+  /**
+   * Optional className for the content area
+   */
   contentClassName?: string;
 }
 

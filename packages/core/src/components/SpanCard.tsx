@@ -8,7 +8,7 @@ import {
   type MouseEvent,
 } from "react";
 
-import type { SpanCardType } from "../types/span";
+import type { TraceSpan } from "../types";
 
 import { formatDuration } from "../services/calculate-duration";
 import { getTimelineData } from "../services/get-timeline-data";
@@ -31,7 +31,7 @@ const LAYOUT_CONSTANTS = {
 type ExpandButtonPlacement = "inside" | "outside";
 
 interface SpanCardProps {
-  data: SpanCardType;
+  data: TraceSpan;
   level?: number;
   selectedCardId?: string;
   avatar?: AvatarProps;
@@ -163,7 +163,7 @@ const getConnectorsLayout = ({
 };
 
 const useSpanCardEventHandlers = (
-  data: SpanCardType,
+  data: TraceSpan,
   isSelected: boolean,
   onSelectionChange?: (cardId: string, isSelected: boolean) => void,
 ) => {
@@ -205,7 +205,7 @@ const useSpanCardEventHandlers = (
 
 const SpanCardChildren: FC<{
   expandButton: "inside" | "outside";
-  data: SpanCardType;
+  data: TraceSpan;
   level: number;
   selectedCardId?: string;
   onChildSelectionChange: (childId: string, childIsSelected: boolean) => void;

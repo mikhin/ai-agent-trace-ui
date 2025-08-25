@@ -1,34 +1,34 @@
-import { TraceList, type Trace } from "ai-agent-trace-ui-core";
+import { TraceList, type TraceRecord } from "ai-agent-trace-ui-core";
 import { useState, type ReactElement } from "react";
 
 import { SandboxItem } from "../components/SandboxItem";
 import { SandboxSection } from "../components/SandboxSection";
 
-const traces: Trace[] = [
+const traces: TraceRecord[] = [
   {
     id: "1",
     name: "Trace 1",
     spansCount: 10,
     durationMs: 10_000,
     agentDescription: "research-agent",
-    badges: [
-      {
-        label: "app: dev-chatbot",
-        theme: "indigo",
-      },
-      {
-        label: "end: dev",
-        theme: "emerald",
-      },
-      {
-        label: "gpt-4",
-        theme: "purple",
-      },
-      {
-        label: "5 tools",
-        theme: "orange",
-      },
-    ],
+    // badges: [
+    //   {
+    //     children: "app:dev-chatbot",
+    //     theme: "indigo",
+    //   },
+    //   {
+    //     children: "end:dev",
+    //     theme: "emerald",
+    //   },
+    //   {
+    //     children: "gpt-4",
+    //     theme: "purple",
+    //   },
+    //   {
+    //     children: "5 tools",
+    //     theme: "orange",
+    //   },
+    // ],
   },
 
   {
@@ -37,24 +37,24 @@ const traces: Trace[] = [
     spansCount: 100,
     durationMs: 100_000,
     agentDescription: "data-analysis-bot",
-    badges: [
-      {
-        label: "app: staging-assistant",
-        theme: "indigo",
-      },
-      {
-        label: "end: staging",
-        theme: "emerald",
-      },
-      {
-        label: "claude-3.5-sonnet",
-        theme: "purple",
-      },
-      {
-        label: "10 tools",
-        theme: "orange",
-      },
-    ],
+    // badges: [
+    //   {
+    //     children: "app: staging-assistant",
+    //     theme: "indigo",
+    //   },
+    //   {
+    //     children: "end: staging",
+    //     theme: "emerald",
+    //   },
+    //   {
+    //     children: "claude-3.5-sonnet",
+    //     theme: "purple",
+    //   },
+    //   {
+    //     children: "10 tools",
+    //     theme: "orange",
+    //   },
+    // ],
   },
 
   {
@@ -63,20 +63,20 @@ const traces: Trace[] = [
     spansCount: 250,
     durationMs: 1_000,
     agentDescription: "customer-support-ai",
-    badges: [
-      {
-        label: "app: prod-analyzer",
-        theme: "indigo",
-      },
-      {
-        label: "end: prod",
-        theme: "emerald",
-      },
-      {
-        label: "gpt-4-turbo",
-        theme: "purple",
-      },
-    ],
+    // badges: [
+    //   {
+    //     children: "app: prod-analyzer",
+    //     theme: "indigo",
+    //   },
+    //   {
+    //     children: "end: prod",
+    //     theme: "emerald",
+    //   },
+    //   {
+    //     children: "gpt-4-turbo",
+    //     theme: "purple",
+    //   },
+    // ],
   },
 ];
 

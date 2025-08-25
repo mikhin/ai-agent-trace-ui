@@ -1,10 +1,10 @@
 import JSONPretty from "react-json-pretty";
 import colors from "tailwindcss/colors";
 
-import type { SpanCardType } from "../types/span.ts";
+import type { TraceSpan } from "../../types";
 
 interface RawDataTabProps {
-  data: SpanCardType;
+  data: TraceSpan;
 }
 
 export const DetailsViewRawDataTab = ({ data }: RawDataTabProps) => (

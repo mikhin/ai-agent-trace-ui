@@ -6,8 +6,16 @@ type IconButtonSize = "sm" | "md" | "lg";
 type IconButtonVariant = "default" | "ghost";
 
 interface IconButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  /**
+   * The size of the icon button
+   */
   size?: IconButtonSize;
+
+  /**
+   * The visual variant of the icon button
+   */
   variant?: IconButtonVariant;
+
   /**
    * Accessible label for screen readers
    * Required for accessibility compliance

@@ -1,23 +1,23 @@
 import cn from "classnames";
 import { Check, Ellipsis, Info, TriangleAlert } from "lucide-react";
 
-import type { SpanStatus } from "../types/span";
+import type { TraceSpanStatus } from "../types";
 
 type StatusVariant = "dot" | "badge";
 
 interface SpanCardStatusProps {
-  status: SpanStatus;
+  status: TraceSpanStatus;
   variant?: StatusVariant;
 }
 
-const STATUS_COLORS_DOT: Record<SpanStatus, string> = {
+const STATUS_COLORS_DOT: Record<TraceSpanStatus, string> = {
   success: "bg-green-500 dark:bg-green-500",
   error: "bg-red-500 dark:bg-red-500",
   pending: "bg-violet-500 dark:bg-violet-500",
   warning: "bg-yellow-500 dark:bg-yellow-500",
 };
 
-const STATUS_COLORS_BADGE: Record<SpanStatus, string> = {
+const STATUS_COLORS_BADGE: Record<TraceSpanStatus, string> = {
   success: "bg-green-100 dark:bg-green-950 text-green-600 dark:text-green-400",
   error: "bg-red-100 dark:bg-red-950 text-red-600 dark:text-red-400",
   pending:

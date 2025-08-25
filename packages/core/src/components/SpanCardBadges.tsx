@@ -1,6 +1,6 @@
 import { Coins } from "lucide-react";
 
-import type { SpanCardType } from "../types/span";
+import type { TraceSpan } from "../types";
 
 import {
   getSpanCategoryIcon,
@@ -10,7 +10,7 @@ import {
 import { Badge } from "./Badge";
 
 interface SpanCardBagdesProps {
-  data: SpanCardType;
+  data: TraceSpan;
 }
 
 export const SpanCardBadges = ({ data }: SpanCardBagdesProps) => {

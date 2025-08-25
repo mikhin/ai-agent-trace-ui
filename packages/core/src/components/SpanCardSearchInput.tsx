@@ -1,10 +1,10 @@
 import { Search } from "lucide-react";
 
-import { Input, type InputProps } from "./Input";
+import { TextInput, type TextInputProps } from "./TextInput.tsx";
 
-export const SpanCardSearchInput = ({ ...props }: InputProps) => {
+export const SpanCardSearchInput = ({ ...props }: TextInputProps) => {
   return (
-    <Input
+    <TextInput
       startIcon={<Search className="size-4" />}
       placeholder="Filter..."
       {...props}

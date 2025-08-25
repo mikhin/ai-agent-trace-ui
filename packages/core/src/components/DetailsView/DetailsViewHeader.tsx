@@ -1,19 +1,19 @@
 import { Check, Copy } from "lucide-react";
 import { useState } from "react";
 
-import type { SpanCardType } from "../types/span.ts";
+import type { TraceSpan } from "../../types";
 
-import { Avatar, type AvatarProps } from "./Avatar.tsx";
-import { DetailsViewHeaderActions } from "./DetailsViewHeaderActions.tsx";
-import { IconButton } from "./IconButton.tsx";
-import { SpanCardStatus } from "./SpanCardStatus.tsx";
+import { Avatar, type AvatarProps } from "../Avatar";
+import { IconButton } from "../IconButton";
+import { SpanCardStatus } from "../SpanCardStatus";
+import { DetailsViewHeaderActions } from "./DetailsViewHeaderActions";
 
 interface DetailsViewHeaderProps {
-  data: SpanCardType;
+  data: TraceSpan;
   avatar?: AvatarProps;
   copyButton?: {
     isEnabled?: boolean;
-    onCopy?: (data: SpanCardType) => void;
+    onCopy?: (data: TraceSpan) => void;
   };
 }
 
